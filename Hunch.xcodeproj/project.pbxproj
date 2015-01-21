@@ -129,6 +129,7 @@
 				AF1E706B1A704C0D00FE05CD /* Sources */,
 				AF1E706C1A704C0D00FE05CD /* Frameworks */,
 				AF1E706D1A704C0D00FE05CD /* Resources */,
+				AF1E70981A704E9400FE05CD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -213,6 +214,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AF1E70981A704E9400FE05CD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "REV=`git rev-list HEAD | wc -l`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $REV\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AF1E706B1A704C0D00FE05CD /* Sources */ = {
@@ -412,6 +429,7 @@
 				AF1E70941A704C0E00FE05CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF1E70951A704C0E00FE05CD /* Build configuration list for PBXNativeTarget "HunchTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +438,7 @@
 				AF1E70971A704C0E00FE05CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
