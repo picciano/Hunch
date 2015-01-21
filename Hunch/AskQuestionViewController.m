@@ -7,6 +7,8 @@
 //
 
 #import "AskQuestionViewController.h"
+#import "SignUpViewController.h"
+#import <Parse/Parse.h>
 
 @interface AskQuestionViewController ()
 
@@ -17,6 +19,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    if ([PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
+        [self displaySignUp];
+    }
+}
+
+- (void)displaySignUp {
+    SignUpViewController *viewController = [[SignUpViewController alloc] initWithNibName:nil bundle:nil];
+    [self presentViewController:viewController animated:YES completion:^{
+        //
+    }];
 }
 
 - (BOOL)prefersStatusBarHidden {
