@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		AF1E70751A704C0D00FE05CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E70741A704C0D00FE05CD /* main.m */; };
 		AF1E70781A704C0D00FE05CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E70771A704C0D00FE05CD /* AppDelegate.m */; };
-		AF1E707B1A704C0D00FE05CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E707A1A704C0D00FE05CD /* ViewController.m */; };
-		AF1E707E1A704C0D00FE05CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1E707C1A704C0D00FE05CD /* Main.storyboard */; };
 		AF1E70801A704C0D00FE05CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF1E707F1A704C0D00FE05CD /* Images.xcassets */; };
 		AF1E70831A704C0D00FE05CD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1E70811A704C0D00FE05CD /* LaunchScreen.xib */; };
 		AF1E708F1A704C0E00FE05CD /* HunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E708E1A704C0E00FE05CD /* HunchTests.m */; };
+		AF1E709D1A70500D00FE05CD /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E709B1A70500D00FE05CD /* QuestionViewController.m */; };
+		AF1E709E1A70500D00FE05CD /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1E709C1A70500D00FE05CD /* QuestionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		AF1E70741A704C0D00FE05CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AF1E70761A704C0D00FE05CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF1E70771A704C0D00FE05CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AF1E70791A704C0D00FE05CD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AF1E707A1A704C0D00FE05CD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AF1E707D1A704C0D00FE05CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF1E707F1A704C0D00FE05CD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AF1E70821A704C0D00FE05CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AF1E70881A704C0E00FE05CD /* HunchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HunchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF1E708D1A704C0E00FE05CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF1E708E1A704C0E00FE05CD /* HunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HunchTests.m; sourceTree = "<group>"; };
+		AF1E709A1A70500D00FE05CD /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		AF1E709B1A70500D00FE05CD /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		AF1E709C1A70500D00FE05CD /* QuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +83,7 @@
 			children = (
 				AF1E70761A704C0D00FE05CD /* AppDelegate.h */,
 				AF1E70771A704C0D00FE05CD /* AppDelegate.m */,
-				AF1E70791A704C0D00FE05CD /* ViewController.h */,
-				AF1E707A1A704C0D00FE05CD /* ViewController.m */,
-				AF1E707C1A704C0D00FE05CD /* Main.storyboard */,
+				AF1E70991A704FD300FE05CD /* Question View */,
 				AF1E707F1A704C0D00FE05CD /* Images.xcassets */,
 				AF1E70811A704C0D00FE05CD /* LaunchScreen.xib */,
 				AF1E70721A704C0D00FE05CD /* Supporting Files */,
@@ -117,6 +115,16 @@
 				AF1E708D1A704C0E00FE05CD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF1E70991A704FD300FE05CD /* Question View */ = {
+			isa = PBXGroup;
+			children = (
+				AF1E709A1A70500D00FE05CD /* QuestionViewController.h */,
+				AF1E709B1A70500D00FE05CD /* QuestionViewController.m */,
+				AF1E709C1A70500D00FE05CD /* QuestionViewController.xib */,
+			);
+			name = "Question View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +208,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF1E707E1A704C0D00FE05CD /* Main.storyboard in Resources */,
 				AF1E70831A704C0D00FE05CD /* LaunchScreen.xib in Resources */,
 				AF1E70801A704C0D00FE05CD /* Images.xcassets in Resources */,
+				AF1E709E1A70500D00FE05CD /* QuestionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,9 +244,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF1E707B1A704C0D00FE05CD /* ViewController.m in Sources */,
 				AF1E70781A704C0D00FE05CD /* AppDelegate.m in Sources */,
 				AF1E70751A704C0D00FE05CD /* main.m in Sources */,
+				AF1E709D1A70500D00FE05CD /* QuestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,14 +269,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AF1E707C1A704C0D00FE05CD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF1E707D1A704C0D00FE05CD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AF1E70811A704C0D00FE05CD /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

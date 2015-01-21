@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  QuestionViewController.h
 //  Hunch
 //
 //  Created by Anthony Picciano on 1/21/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface QuestionViewController : UIViewController
 
 @end
-
