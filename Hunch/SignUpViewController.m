@@ -7,10 +7,13 @@
 //
 
 #import "SignUpViewController.h"
+#import "CocoaLumberjack.h"
 
 @interface SignUpViewController ()
 
 @end
+
+static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 @implementation SignUpViewController
 
@@ -22,6 +25,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)signUp:(id)sender {
+    
 }
 
 - (BOOL)prefersStatusBarHidden {

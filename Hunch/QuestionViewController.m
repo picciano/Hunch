@@ -25,7 +25,7 @@
 }
 
 - (IBAction)askAQuestion:(id)sender {
-    AskQuestionViewController *viewController = [[AskQuestionViewController alloc] initWithNibName:nil bundle:nil];
+    UIViewController *viewController = [[AskQuestionViewController alloc] initWithNibName:nil bundle:nil];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

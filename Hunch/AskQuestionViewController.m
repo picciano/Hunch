@@ -32,7 +32,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 }
 
 - (void)displaySignUp {
-    SignUpViewController *viewController = [[SignUpViewController alloc] initWithNibName:nil bundle:nil];
+    UIViewController *viewController = [[SignUpViewController alloc] initWithNibName:nil bundle:nil];
     [self presentViewController:viewController animated:YES completion:^{
         
     }];

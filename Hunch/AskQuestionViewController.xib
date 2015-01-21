@@ -21,12 +21,23 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yhz-HY-jpR">
+                    <rect key="frame" x="1" y="1" width="60" height="60"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="CHi-78-i6T"/>
+                        <constraint firstAttribute="height" constant="60" id="bBd-1s-kkm"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="Yhz-HY-jpR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="1" id="Zb9-Vr-hUo"/>
                 <constraint firstItem="VbB-IP-AFC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="dRq-Y2-thx"/>
                 <constraint firstItem="VbB-IP-AFC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dcW-Uu-vkF"/>
+                <constraint firstItem="Yhz-HY-jpR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="1" id="ogg-Dn-sp8"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
 </document>

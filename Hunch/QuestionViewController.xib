@@ -30,13 +30,23 @@
                         <action selector="askAQuestion:" destination="-1" eventType="touchUpInside" id="Eni-Lh-PQQ"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHG-1Q-rns">
+                    <rect key="frame" x="1" y="1" width="60" height="60"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="XWQ-dR-B2e"/>
+                        <constraint firstAttribute="height" constant="60" id="ssp-oX-IJ9"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="GHG-1Q-rns" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="1" id="5hc-86-f5a"/>
                 <constraint firstItem="e3c-5L-xmp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="HII-s7-gbh"/>
                 <constraint firstItem="e3c-5L-xmp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Qr7-eP-z4N"/>
                 <constraint firstItem="Dsf-Sw-dNU" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="SXx-3U-RPZ"/>
                 <constraint firstItem="Dsf-Sw-dNU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="66" id="cbw-iH-Aok"/>
+                <constraint firstItem="GHG-1Q-rns" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="1" id="vkK-4W-4c9"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
         </view>
