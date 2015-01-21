@@ -31,6 +31,11 @@
 		AF1E70C01A70585900FE05CD /* AskQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1E70BE1A70585900FE05CD /* AskQuestionViewController.xib */; };
 		AFF84A471A705EEA003DA995 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF84A451A705EEA003DA995 /* SignUpViewController.m */; };
 		AFF84A481A705EEA003DA995 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF84A461A705EEA003DA995 /* SignUpViewController.xib */; };
+		AFF84A511A70611D003DA995 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF84A501A70611D003DA995 /* DDLog.m */; };
+		AFF84A561A70619D003DA995 /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF84A551A70619D003DA995 /* DDASLLogCapture.m */; };
+		AFF84A591A7061B5003DA995 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF84A581A7061B5003DA995 /* DDASLLogger.m */; };
+		AFF84A5C1A7061C4003DA995 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF84A5B1A7061C4003DA995 /* DDTTYLogger.m */; };
+		AFF84A5F1A7061D4003DA995 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF84A5E1A7061D4003DA995 /* DDFileLogger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +82,19 @@
 		AFF84A441A705EEA003DA995 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		AFF84A451A705EEA003DA995 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		AFF84A461A705EEA003DA995 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		AFF84A4E1A7060FA003DA995 /* CocoaLumberjack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocoaLumberjack.h; sourceTree = "<group>"; };
+		AFF84A4F1A70611D003DA995 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		AFF84A501A70611D003DA995 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		AFF84A521A70617A003DA995 /* DDLogMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDLogMacros.h; sourceTree = "<group>"; };
+		AFF84A531A706190003DA995 /* DDAssertMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDAssertMacros.h; sourceTree = "<group>"; };
+		AFF84A541A70619D003DA995 /* DDASLLogCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogCapture.h; sourceTree = "<group>"; };
+		AFF84A551A70619D003DA995 /* DDASLLogCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogCapture.m; sourceTree = "<group>"; };
+		AFF84A571A7061B5003DA995 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		AFF84A581A7061B5003DA995 /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		AFF84A5A1A7061C4003DA995 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		AFF84A5B1A7061C4003DA995 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		AFF84A5D1A7061D4003DA995 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		AFF84A5E1A7061D4003DA995 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +158,7 @@
 				AF1E707F1A704C0D00FE05CD /* Images.xcassets */,
 				AF1E70811A704C0D00FE05CD /* LaunchScreen.xib */,
 				AF1E70721A704C0D00FE05CD /* Supporting Files */,
+				AFF84A491A706076003DA995 /* Cocoa Lumberjack */,
 				AF1E709F1A7053B800FE05CD /* Frameworks */,
 			);
 			path = Hunch;
@@ -219,6 +238,26 @@
 				AFF84A461A705EEA003DA995 /* SignUpViewController.xib */,
 			);
 			name = "Sign Up View";
+			sourceTree = "<group>";
+		};
+		AFF84A491A706076003DA995 /* Cocoa Lumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				AFF84A4E1A7060FA003DA995 /* CocoaLumberjack.h */,
+				AFF84A4F1A70611D003DA995 /* DDLog.h */,
+				AFF84A501A70611D003DA995 /* DDLog.m */,
+				AFF84A521A70617A003DA995 /* DDLogMacros.h */,
+				AFF84A531A706190003DA995 /* DDAssertMacros.h */,
+				AFF84A541A70619D003DA995 /* DDASLLogCapture.h */,
+				AFF84A551A70619D003DA995 /* DDASLLogCapture.m */,
+				AFF84A571A7061B5003DA995 /* DDASLLogger.h */,
+				AFF84A581A7061B5003DA995 /* DDASLLogger.m */,
+				AFF84A5A1A7061C4003DA995 /* DDTTYLogger.h */,
+				AFF84A5B1A7061C4003DA995 /* DDTTYLogger.m */,
+				AFF84A5D1A7061D4003DA995 /* DDFileLogger.h */,
+				AFF84A5E1A7061D4003DA995 /* DDFileLogger.m */,
+			);
+			name = "Cocoa Lumberjack";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,11 +380,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF84A591A7061B5003DA995 /* DDASLLogger.m in Sources */,
+				AFF84A511A70611D003DA995 /* DDLog.m in Sources */,
 				AF1E70BF1A70585900FE05CD /* AskQuestionViewController.m in Sources */,
+				AFF84A5C1A7061C4003DA995 /* DDTTYLogger.m in Sources */,
+				AFF84A561A70619D003DA995 /* DDASLLogCapture.m in Sources */,
 				AFF84A471A705EEA003DA995 /* SignUpViewController.m in Sources */,
 				AF1E70781A704C0D00FE05CD /* AppDelegate.m in Sources */,
 				AF1E70751A704C0D00FE05CD /* main.m in Sources */,
 				AF1E709D1A70500D00FE05CD /* QuestionViewController.m in Sources */,
+				AFF84A5F1A7061D4003DA995 /* DDFileLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

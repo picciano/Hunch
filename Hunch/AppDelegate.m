@@ -10,6 +10,7 @@
 #import "QuestionViewController.h"
 #import <Parse/Parse.h>
 #import "Constants.h"
+#import "CocoaLumberjack.h"
 
 @interface AppDelegate ()
 
@@ -19,9 +20,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self initializeLumberjackWithOptions:launchOptions];
     [self initializeParseWithOptions:launchOptions];
     [self initializeUserInterfaceWithOptions:launchOptions];
     return YES;
+}
+
+- (void)initializeLumberjackWithOptions:(NSDictionary *)launchOptions {
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
 }
 
 - (void)initializeParseWithOptions:(NSDictionary *)launchOptions {

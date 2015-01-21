@@ -9,10 +9,13 @@
 #import "AskQuestionViewController.h"
 #import "SignUpViewController.h"
 #import <Parse/Parse.h>
+#import "CocoaLumberjack.h"
 
 @interface AskQuestionViewController ()
 
 @end
+
+static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 @implementation AskQuestionViewController
 
@@ -23,6 +26,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     if ([PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
+        DDLogDebug(@"User is anonymous. Show sign up view.");
         [self displaySignUp];
     }
 }
@@ -30,7 +34,7 @@
 - (void)displaySignUp {
     SignUpViewController *viewController = [[SignUpViewController alloc] initWithNibName:nil bundle:nil];
     [self presentViewController:viewController animated:YES completion:^{
-        //
+        
     }];
 }
 
