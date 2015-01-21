@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "QuestionViewController.h"
+#import <Parse/Parse.h>
+#import "Constants.h"
 
 @interface AppDelegate ()
 
@@ -17,11 +19,27 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    QuestionViewController *viewController = [[QuestionViewController alloc] initWithNibName:nil bundle:nil];
-    self.window.rootViewController = viewController;
-    [self.window makeKeyAndVisible];
+    [self initializeParseWithOptions:launchOptions];
+    [self initializeUserInterfaceWithOptions:launchOptions];
     return YES;
+}
+
+- (void)initializeParseWithOptions:(NSDictionary *)launchOptions {
+    [Parse setApplicationId:PARSE_APPLICATION_ID
+                  clientKey:PARSE_CLIENT_KEY];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    [PFUser enableAutomaticUser];
+}
+
+- (void)initializeUserInterfaceWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    QuestionViewController *viewController = [[QuestionViewController alloc] initWithNibName:nil bundle:nil];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    navigationController.navigationBarHidden = YES;
+    self.window.rootViewController = navigationController;
+    
+    [self.window makeKeyAndVisible];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

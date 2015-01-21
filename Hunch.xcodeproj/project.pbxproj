@@ -14,6 +14,21 @@
 		AF1E708F1A704C0E00FE05CD /* HunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E708E1A704C0E00FE05CD /* HunchTests.m */; };
 		AF1E709D1A70500D00FE05CD /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E709B1A70500D00FE05CD /* QuestionViewController.m */; };
 		AF1E709E1A70500D00FE05CD /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1E709C1A70500D00FE05CD /* QuestionViewController.xib */; };
+		AF1E70A11A70540000FE05CD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1E70A01A70540000FE05CD /* Parse.framework */; };
+		AF1E70A31A70541B00FE05CD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1E70A21A70541B00FE05CD /* Bolts.framework */; };
+		AF1E70A51A70543D00FE05CD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1E70A41A70543D00FE05CD /* AudioToolbox.framework */; };
+		AF1E70A71A70544400FE05CD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1E70A61A70544400FE05CD /* CFNetwork.framework */; };
+		AF1E70A91A70544A00FE05CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1E70A81A70544A00FE05CD /* CoreGraphics.framework */; };
+		AF1E70AB1A70545000FE05CD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1E70AA1A70545000FE05CD /* CoreLocation.framework */; };
+		AF1E70AD1A70545900FE05CD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1E70AC1A70545900FE05CD /* MobileCoreServices.framework */; };
+		AF1E70AF1A70545F00FE05CD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1E70AE1A70545F00FE05CD /* QuartzCore.framework */; };
+		AF1E70B11A70546600FE05CD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1E70B01A70546600FE05CD /* Security.framework */; };
+		AF1E70B31A70546C00FE05CD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1E70B21A70546C00FE05CD /* StoreKit.framework */; };
+		AF1E70B51A70547600FE05CD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1E70B41A70547600FE05CD /* SystemConfiguration.framework */; };
+		AF1E70B71A70547E00FE05CD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1E70B61A70547E00FE05CD /* libz.dylib */; };
+		AF1E70B91A70548600FE05CD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1E70B81A70548600FE05CD /* libsqlite3.dylib */; };
+		AF1E70BF1A70585900FE05CD /* AskQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E70BD1A70585900FE05CD /* AskQuestionViewController.m */; };
+		AF1E70C01A70585900FE05CD /* AskQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1E70BE1A70585900FE05CD /* AskQuestionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +55,23 @@
 		AF1E709A1A70500D00FE05CD /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
 		AF1E709B1A70500D00FE05CD /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 		AF1E709C1A70500D00FE05CD /* QuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
+		AF1E70A01A70540000FE05CD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		AF1E70A21A70541B00FE05CD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		AF1E70A41A70543D00FE05CD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AF1E70A61A70544400FE05CD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AF1E70A81A70544A00FE05CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AF1E70AA1A70545000FE05CD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AF1E70AC1A70545900FE05CD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		AF1E70AE1A70545F00FE05CD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AF1E70B01A70546600FE05CD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AF1E70B21A70546C00FE05CD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		AF1E70B41A70547600FE05CD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AF1E70B61A70547E00FE05CD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		AF1E70B81A70548600FE05CD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		AF1E70BA1A7054EF00FE05CD /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		AF1E70BC1A70585900FE05CD /* AskQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskQuestionViewController.h; sourceTree = "<group>"; };
+		AF1E70BD1A70585900FE05CD /* AskQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskQuestionViewController.m; sourceTree = "<group>"; };
+		AF1E70BE1A70585900FE05CD /* AskQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AskQuestionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +79,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF1E70B91A70548600FE05CD /* libsqlite3.dylib in Frameworks */,
+				AF1E70B71A70547E00FE05CD /* libz.dylib in Frameworks */,
+				AF1E70B51A70547600FE05CD /* SystemConfiguration.framework in Frameworks */,
+				AF1E70B31A70546C00FE05CD /* StoreKit.framework in Frameworks */,
+				AF1E70B11A70546600FE05CD /* Security.framework in Frameworks */,
+				AF1E70AF1A70545F00FE05CD /* QuartzCore.framework in Frameworks */,
+				AF1E70AD1A70545900FE05CD /* MobileCoreServices.framework in Frameworks */,
+				AF1E70AB1A70545000FE05CD /* CoreLocation.framework in Frameworks */,
+				AF1E70A91A70544A00FE05CD /* CoreGraphics.framework in Frameworks */,
+				AF1E70A71A70544400FE05CD /* CFNetwork.framework in Frameworks */,
+				AF1E70A51A70543D00FE05CD /* AudioToolbox.framework in Frameworks */,
+				AF1E70A11A70540000FE05CD /* Parse.framework in Frameworks */,
+				AF1E70A31A70541B00FE05CD /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,10 +128,13 @@
 			children = (
 				AF1E70761A704C0D00FE05CD /* AppDelegate.h */,
 				AF1E70771A704C0D00FE05CD /* AppDelegate.m */,
+				AF1E70BA1A7054EF00FE05CD /* Constants.h */,
 				AF1E70991A704FD300FE05CD /* Question View */,
+				AF1E70BB1A70583E00FE05CD /* Ask Question View */,
 				AF1E707F1A704C0D00FE05CD /* Images.xcassets */,
 				AF1E70811A704C0D00FE05CD /* LaunchScreen.xib */,
 				AF1E70721A704C0D00FE05CD /* Supporting Files */,
+				AF1E709F1A7053B800FE05CD /* Frameworks */,
 			);
 			path = Hunch;
 			sourceTree = "<group>";
@@ -125,6 +173,36 @@
 				AF1E709C1A70500D00FE05CD /* QuestionViewController.xib */,
 			);
 			name = "Question View";
+			sourceTree = "<group>";
+		};
+		AF1E709F1A7053B800FE05CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF1E70B81A70548600FE05CD /* libsqlite3.dylib */,
+				AF1E70B61A70547E00FE05CD /* libz.dylib */,
+				AF1E70B41A70547600FE05CD /* SystemConfiguration.framework */,
+				AF1E70B21A70546C00FE05CD /* StoreKit.framework */,
+				AF1E70B01A70546600FE05CD /* Security.framework */,
+				AF1E70AE1A70545F00FE05CD /* QuartzCore.framework */,
+				AF1E70AC1A70545900FE05CD /* MobileCoreServices.framework */,
+				AF1E70AA1A70545000FE05CD /* CoreLocation.framework */,
+				AF1E70A81A70544A00FE05CD /* CoreGraphics.framework */,
+				AF1E70A61A70544400FE05CD /* CFNetwork.framework */,
+				AF1E70A41A70543D00FE05CD /* AudioToolbox.framework */,
+				AF1E70A21A70541B00FE05CD /* Bolts.framework */,
+				AF1E70A01A70540000FE05CD /* Parse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF1E70BB1A70583E00FE05CD /* Ask Question View */ = {
+			isa = PBXGroup;
+			children = (
+				AF1E70BC1A70585900FE05CD /* AskQuestionViewController.h */,
+				AF1E70BD1A70585900FE05CD /* AskQuestionViewController.m */,
+				AF1E70BE1A70585900FE05CD /* AskQuestionViewController.xib */,
+			);
+			name = "Ask Question View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF1E70C01A70585900FE05CD /* AskQuestionViewController.xib in Resources */,
 				AF1E70831A704C0D00FE05CD /* LaunchScreen.xib in Resources */,
 				AF1E70801A704C0D00FE05CD /* Images.xcassets in Resources */,
 				AF1E709E1A70500D00FE05CD /* QuestionViewController.xib in Resources */,
@@ -244,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF1E70BF1A70585900FE05CD /* AskQuestionViewController.m in Sources */,
 				AF1E70781A704C0D00FE05CD /* AppDelegate.m in Sources */,
 				AF1E70751A704C0D00FE05CD /* main.m in Sources */,
 				AF1E709D1A70500D00FE05CD /* QuestionViewController.m in Sources */,
@@ -360,6 +440,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Hunch",
+				);
 				INFOPLIST_FILE = Hunch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -370,6 +454,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Hunch",
+				);
 				INFOPLIST_FILE = Hunch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

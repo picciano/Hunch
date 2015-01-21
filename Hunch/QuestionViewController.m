@@ -7,6 +7,7 @@
 //
 
 #import "QuestionViewController.h"
+#import "AskQuestionViewController.h"
 
 @interface QuestionViewController ()
 
@@ -21,6 +22,11 @@
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
+}
+
+- (IBAction)askAQuestion:(id)sender {
+    AskQuestionViewController *viewController = [[AskQuestionViewController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

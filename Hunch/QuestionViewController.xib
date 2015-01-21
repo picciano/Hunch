@@ -23,12 +23,28 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsf-Sw-dNU">
+                    <rect key="frame" x="490" y="8" width="102" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="102" id="7LC-JE-Weh"/>
+                        <constraint firstAttribute="height" constant="30" id="Ziq-Ak-usf"/>
+                    </constraints>
+                    <state key="normal" title="Ask a question">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="askAQuestion:" destination="-1" eventType="touchUpInside" id="Eni-Lh-PQQ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="Dsf-Sw-dNU" secondAttribute="trailing" constant="8" id="6vc-Vn-xW9"/>
+                <constraint firstItem="Dsf-Sw-dNU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="OWj-QS-g36"/>
                 <constraint firstAttribute="centerX" secondItem="e3c-5L-xmp" secondAttribute="centerX" id="dXp-5a-RNt"/>
                 <constraint firstItem="e3c-5L-xmp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="duQ-uF-QVw"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
 </document>
