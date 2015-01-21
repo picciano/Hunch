@@ -23,10 +23,80 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9K-qD-MrN">
+                    <rect key="frame" x="8" y="65" width="584" height="124"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="124" id="iKF-Py-Jrf"/>
+                    </constraints>
+                    <string key="text">Before asking a question, we need you to add a username and password to your account. This will allow you to come back and see the answer. Really, that's the whole point of asking a question in the first place.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7m-h4-9Rr">
+                    <rect key="frame" x="8" y="197" width="79" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="79" id="ArQ-IM-hDe"/>
+                        <constraint firstAttribute="height" constant="21" id="bw9-wn-SeK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C70-sc-Tk2">
+                    <rect key="frame" x="95" y="193" width="497" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="234-d1-go5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pj0-Ed-uIC">
+                    <rect key="frame" x="8" y="249" width="76" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="76" id="dBZ-Bq-QKZ"/>
+                        <constraint firstAttribute="height" constant="21" id="qQQ-ac-w7Y"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bNq-Oe-DsJ">
+                    <rect key="frame" x="95" y="245" width="497" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="a5w-fw-rTZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALG-3M-7wl">
+                    <rect key="frame" x="273" y="310" width="55" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="OfV-8X-rbl"/>
+                    </constraints>
+                    <state key="normal" title="Sign Up">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="e7m-h4-9Rr" firstAttribute="top" secondItem="n9K-qD-MrN" secondAttribute="bottom" constant="8" id="1HH-Ot-FTp"/>
+                <constraint firstItem="n9K-qD-MrN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="1XB-81-HmY"/>
+                <constraint firstItem="pj0-Ed-uIC" firstAttribute="top" secondItem="e7m-h4-9Rr" secondAttribute="bottom" constant="31" id="1lh-b5-bWS"/>
+                <constraint firstAttribute="trailing" secondItem="n9K-qD-MrN" secondAttribute="trailing" constant="8" id="4Js-fC-Sco"/>
+                <constraint firstItem="ALG-3M-7wl" firstAttribute="top" secondItem="bNq-Oe-DsJ" secondAttribute="bottom" constant="35" id="8cT-nf-UF1"/>
+                <constraint firstAttribute="trailing" secondItem="C70-sc-Tk2" secondAttribute="trailing" constant="8" id="LVW-xA-J35"/>
+                <constraint firstItem="pj0-Ed-uIC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="RHq-Vb-cTL"/>
+                <constraint firstItem="bNq-Oe-DsJ" firstAttribute="top" secondItem="C70-sc-Tk2" secondAttribute="bottom" constant="22" id="RQB-be-Y5Q"/>
+                <constraint firstItem="bNq-Oe-DsJ" firstAttribute="leading" secondItem="pj0-Ed-uIC" secondAttribute="trailing" constant="11" id="aBN-KS-EfF"/>
+                <constraint firstItem="C70-sc-Tk2" firstAttribute="leading" secondItem="e7m-h4-9Rr" secondAttribute="trailing" constant="8" id="cW7-sP-ZTN"/>
+                <constraint firstItem="e7m-h4-9Rr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="cWT-Rc-Pnu"/>
+                <constraint firstItem="C70-sc-Tk2" firstAttribute="top" secondItem="n9K-qD-MrN" secondAttribute="bottom" constant="4" id="gtD-G6-Uzk"/>
+                <constraint firstAttribute="trailing" secondItem="bNq-Oe-DsJ" secondAttribute="trailing" constant="8" id="iqU-HD-SzR"/>
                 <constraint firstAttribute="centerX" secondItem="STW-Dq-44x" secondAttribute="centerX" id="nST-Nl-gXf"/>
+                <constraint firstAttribute="centerX" secondItem="ALG-3M-7wl" secondAttribute="centerX" id="nYz-Zh-Pet"/>
+                <constraint firstItem="n9K-qD-MrN" firstAttribute="top" secondItem="STW-Dq-44x" secondAttribute="bottom" constant="36" id="oli-lq-pfI"/>
                 <constraint firstItem="STW-Dq-44x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="tUe-0n-i8H"/>
             </constraints>
         </view>
