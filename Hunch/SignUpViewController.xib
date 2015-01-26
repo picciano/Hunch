@@ -32,7 +32,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="124" id="Nf2-Dc-FzM"/>
                     </constraints>
-                    <string key="text">Before asking a question, we need you to add a username and password to your account. This will allow you to come back and see the answer. Really, that's the whole point of asking a question in the first place.</string>
+                    <string key="text">Before asking a question, we need you to add a username and password to your account. This will allow you to come back and see the answers. Really, that's the whole point of asking a question in the first place.</string>
                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
