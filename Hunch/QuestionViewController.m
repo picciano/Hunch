@@ -8,6 +8,7 @@
 
 #import "QuestionViewController.h"
 #import "AskQuestionViewController.h"
+#import "ProfileViewController.h"
 #import "Constants.h"
 #import <Parse/Parse.h>
 #import "CocoaLumberjack.h"
@@ -15,6 +16,7 @@
 @interface QuestionViewController ()
 
 @property (strong, nonatomic) PFObject *currentQuestion;
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 
 @end
 
@@ -24,6 +26,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadEligibleQuestion];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -37,6 +40,24 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 - (IBAction)getQuestion:(id)sender {
     [self loadEligibleQuestion];
+}
+
+- (void)setCurrentQuestion:(PFObject *)currentQuestion {
+    _currentQuestion = currentQuestion;
+    [self updateDisplay:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self updateDisplay:nil];
+}
+
+- (IBAction)updateDisplay:(id)sender {
+    self.questionLabel.text = self.currentQuestion[OBJECT_KEY_TEXT];
+}
+
+- (IBAction)viewProfile:(id)sender {
+    UIViewController *viewController = [[ProfileViewController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void)loadEligibleQuestion {

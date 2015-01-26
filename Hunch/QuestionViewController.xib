@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionViewController">
             <connections>
+                <outlet property="questionLabel" destination="MNT-mP-daz" id="NYk-Xv-o6T"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,17 +16,27 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question View" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3c-5L-xmp">
-                    <rect key="frame" x="242" y="8" width="116" height="20"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNT-mP-daz">
+                    <rect key="frame" x="8" y="113" width="584" height="74"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="20" id="ubE-w4-6jw"/>
+                        <constraint firstAttribute="height" constant="74" id="HPe-18-QN6"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCa-8L-8JJ">
+                    <rect key="frame" x="545" y="8" width="47" height="30"/>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                    <state key="normal" title="Profile">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="viewProfile:" destination="-1" eventType="touchUpInside" id="8SC-y6-DJR"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsf-Sw-dNU">
-                    <rect key="frame" x="486" y="66" width="106" height="30"/>
+                    <rect key="frame" x="486" y="46" width="106" height="30"/>
                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
                     <state key="normal" title="Ask a question">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,22 +45,16 @@
                         <action selector="askAQuestion:" destination="-1" eventType="touchUpInside" id="Eni-Lh-PQQ"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfA-VN-5VH">
-                    <rect key="frame" x="8" y="155" width="91" height="30"/>
-                    <state key="normal" title="Get Question">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="getQuestion:" destination="-1" eventType="touchUpInside" id="xZQ-tU-J2j"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="e3c-5L-xmp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="HII-s7-gbh"/>
-                <constraint firstItem="e3c-5L-xmp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Qr7-eP-z4N"/>
-                <constraint firstItem="Dsf-Sw-dNU" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="SXx-3U-RPZ"/>
-                <constraint firstItem="Dsf-Sw-dNU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="66" id="cbw-iH-Aok"/>
+                <constraint firstItem="MNT-mP-daz" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="2Oc-ks-Z7S"/>
+                <constraint firstItem="MNT-mP-daz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="GRX-2c-6V3"/>
+                <constraint firstItem="MNT-mP-daz" firstAttribute="top" secondItem="Dsf-Sw-dNU" secondAttribute="bottom" constant="37" id="Hef-8l-Q4Q"/>
+                <constraint firstItem="aCa-8L-8JJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="LBy-Bg-c3O"/>
+                <constraint firstItem="Dsf-Sw-dNU" firstAttribute="top" secondItem="aCa-8L-8JJ" secondAttribute="bottom" constant="8" symbolic="YES" id="m79-fs-7HC"/>
+                <constraint firstItem="aCa-8L-8JJ" firstAttribute="trailing" secondItem="Dsf-Sw-dNU" secondAttribute="trailing" id="wNA-Z2-w3n"/>
+                <constraint firstItem="Dsf-Sw-dNU" firstAttribute="trailing" secondItem="MNT-mP-daz" secondAttribute="trailing" id="x7R-5P-5aa"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
         </view>

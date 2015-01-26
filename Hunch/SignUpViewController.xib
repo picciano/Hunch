@@ -18,15 +18,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up View" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1F-83-aAQ">
-                    <rect key="frame" x="247" y="0.0" width="107" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="lGf-lE-EjK"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9K-qD-MrN">
                     <rect key="frame" x="8" y="28" width="584" height="124"/>
                     <constraints>
@@ -113,8 +104,6 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="n9K-qD-MrN" firstAttribute="top" secondItem="s1F-83-aAQ" secondAttribute="bottom" constant="8" id="7Di-IY-6qU"/>
-                <constraint firstAttribute="centerX" secondItem="s1F-83-aAQ" secondAttribute="centerX" id="7dV-GO-t35"/>
                 <constraint firstItem="e7m-h4-9Rr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="7pu-do-RLG"/>
                 <constraint firstItem="C70-sc-Tk2" firstAttribute="leading" secondItem="e7m-h4-9Rr" secondAttribute="trailing" constant="8" id="99s-ct-3h9"/>
                 <constraint firstAttribute="trailing" secondItem="bNq-Oe-DsJ" secondAttribute="trailing" constant="8" id="FYE-kl-qLQ"/>
@@ -124,11 +113,11 @@
                 <constraint firstItem="bNq-Oe-DsJ" firstAttribute="leading" secondItem="pj0-Ed-uIC" secondAttribute="trailing" constant="13" id="SRC-HL-4sk"/>
                 <constraint firstAttribute="centerX" secondItem="ALG-3M-7wl" secondAttribute="centerX" id="WQk-lv-zpR"/>
                 <constraint firstItem="6Ut-qJ-KzN" firstAttribute="top" secondItem="ALG-3M-7wl" secondAttribute="bottom" constant="8" id="Zhy-GQ-wop"/>
+                <constraint firstItem="n9K-qD-MrN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="28" id="gwI-Ur-tA9"/>
                 <constraint firstItem="bNq-Oe-DsJ" firstAttribute="top" secondItem="C70-sc-Tk2" secondAttribute="bottom" constant="22" id="jay-R2-Tau"/>
                 <constraint firstItem="pj0-Ed-uIC" firstAttribute="top" secondItem="e7m-h4-9Rr" secondAttribute="bottom" constant="31" id="kLV-oW-FOW"/>
                 <constraint firstAttribute="centerX" secondItem="6Ut-qJ-KzN" secondAttribute="centerX" id="n00-vW-2J6"/>
                 <constraint firstItem="pj0-Ed-uIC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="uSu-94-JLn"/>
-                <constraint firstItem="s1F-83-aAQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ucV-Dc-9Z0"/>
                 <constraint firstItem="e7m-h4-9Rr" firstAttribute="top" secondItem="n9K-qD-MrN" secondAttribute="bottom" constant="8" id="ur1-44-mKR"/>
                 <constraint firstAttribute="trailing" secondItem="C70-sc-Tk2" secondAttribute="trailing" constant="8" id="wSX-9n-ttM"/>
                 <constraint firstItem="C70-sc-Tk2" firstAttribute="top" secondItem="n9K-qD-MrN" secondAttribute="bottom" constant="4" id="yXl-Ld-JBx"/>

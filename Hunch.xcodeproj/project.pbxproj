@@ -30,6 +30,8 @@
 		AF1E70BF1A70585900FE05CD /* AskQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E70BD1A70585900FE05CD /* AskQuestionViewController.m */; };
 		AF1E70C01A70585900FE05CD /* AskQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1E70BE1A70585900FE05CD /* AskQuestionViewController.xib */; };
 		AF3E5A191A7694B4002574A1 /* UIControl+NextControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3E5A181A7694B4002574A1 /* UIControl+NextControl.m */; };
+		AF3E5A1E1A76F3EF002574A1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3E5A1C1A76F3EF002574A1 /* ProfileViewController.m */; };
+		AF3E5A1F1A76F3EF002574A1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3E5A1D1A76F3EF002574A1 /* ProfileViewController.xib */; };
 		AFF84A471A705EEA003DA995 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF84A451A705EEA003DA995 /* SignUpViewController.m */; };
 		AFF84A481A705EEA003DA995 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF84A461A705EEA003DA995 /* SignUpViewController.xib */; };
 		AFF84A511A70611D003DA995 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF84A501A70611D003DA995 /* DDLog.m */; };
@@ -82,6 +84,9 @@
 		AF1E70BE1A70585900FE05CD /* AskQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AskQuestionViewController.xib; sourceTree = "<group>"; };
 		AF3E5A171A7694B4002574A1 /* UIControl+NextControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+NextControl.h"; sourceTree = "<group>"; };
 		AF3E5A181A7694B4002574A1 /* UIControl+NextControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+NextControl.m"; sourceTree = "<group>"; };
+		AF3E5A1B1A76F3EF002574A1 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		AF3E5A1C1A76F3EF002574A1 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		AF3E5A1D1A76F3EF002574A1 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		AFF84A441A705EEA003DA995 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		AFF84A451A705EEA003DA995 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		AFF84A461A705EEA003DA995 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
@@ -157,6 +162,7 @@
 				AF1E70BA1A7054EF00FE05CD /* Constants.h */,
 				AF1E70991A704FD300FE05CD /* Question View */,
 				AF1E70BB1A70583E00FE05CD /* Ask Question View */,
+				AF3E5A1A1A76F3CF002574A1 /* Profile View */,
 				AFF84A431A705EB4003DA995 /* Sign Up View */,
 				AF1E707F1A704C0D00FE05CD /* Images.xcassets */,
 				AF1E70811A704C0D00FE05CD /* LaunchScreen.xib */,
@@ -233,6 +239,16 @@
 				AF1E70BE1A70585900FE05CD /* AskQuestionViewController.xib */,
 			);
 			name = "Ask Question View";
+			sourceTree = "<group>";
+		};
+		AF3E5A1A1A76F3CF002574A1 /* Profile View */ = {
+			isa = PBXGroup;
+			children = (
+				AF3E5A1B1A76F3EF002574A1 /* ProfileViewController.h */,
+				AF3E5A1C1A76F3EF002574A1 /* ProfileViewController.m */,
+				AF3E5A1D1A76F3EF002574A1 /* ProfileViewController.xib */,
+			);
+			name = "Profile View";
 			sourceTree = "<group>";
 		};
 		AFF84A431A705EB4003DA995 /* Sign Up View */ = {
@@ -347,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3E5A1F1A76F3EF002574A1 /* ProfileViewController.xib in Resources */,
 				AFF84A481A705EEA003DA995 /* SignUpViewController.xib in Resources */,
 				AF1E70C01A70585900FE05CD /* AskQuestionViewController.xib in Resources */,
 				AF1E70831A704C0D00FE05CD /* LaunchScreen.xib in Resources */,
@@ -395,6 +412,7 @@
 				AF1E70781A704C0D00FE05CD /* AppDelegate.m in Sources */,
 				AF1E70751A704C0D00FE05CD /* main.m in Sources */,
 				AF1E709D1A70500D00FE05CD /* QuestionViewController.m in Sources */,
+				AF3E5A1E1A76F3EF002574A1 /* ProfileViewController.m in Sources */,
 				AFF84A5F1A7061D4003DA995 /* DDFileLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

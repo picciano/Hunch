@@ -130,13 +130,13 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
                 DDLogError(@"Error during save question: %@", error);
             } else {
                 DDLogInfo(@"Question saved.");
-                [self performSelectorOnMainThread:@selector(dismiss) withObject:nil waitUntilDone:NO];
+                [self performSelectorOnMainThread:@selector(dismiss:) withObject:nil waitUntilDone:NO];
             }
         }];
     });
 }
 
-- (void)dismiss {
+- (IBAction)dismiss:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
