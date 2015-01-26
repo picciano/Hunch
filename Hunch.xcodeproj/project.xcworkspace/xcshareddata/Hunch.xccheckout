@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>73BD43DE-AEC8-44A6-B01F-9ACE5AA64297</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Hunch</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>128F5D2368BDA42D17BFFA5AD18CEE20A2F359AD</key>
+		<string>https://github.com/picciano/Hunch.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Hunch.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>128F5D2368BDA42D17BFFA5AD18CEE20A2F359AD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/picciano/Hunch.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>128F5D2368BDA42D17BFFA5AD18CEE20A2F359AD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>128F5D2368BDA42D17BFFA5AD18CEE20A2F359AD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Hunch</string>
+		</dict>
+	</array>
+</dict>
+</plist>

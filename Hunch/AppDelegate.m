@@ -16,8 +16,9 @@
 
 @end
 
-@implementation AppDelegate
+static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self initializeLumberjackWithOptions:launchOptions];
@@ -36,6 +37,11 @@
                   clientKey:PARSE_CLIENT_KEY];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [PFUser enableAutomaticUser];
+    
+    if ([PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
+        DDLogDebug(@"User is anonymous. Save it.");
+        [[PFUser currentUser] save];
+    }
 }
 
 - (void)initializeUserInterfaceWithOptions:(NSDictionary *)launchOptions {
