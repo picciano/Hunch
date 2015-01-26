@@ -6,6 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController">
             <connections>
+                <outlet property="loginButton" destination="6Ut-qJ-KzN" id="vsJ-Uj-iFA"/>
+                <outlet property="passwordField" destination="bNq-Oe-DsJ" id="xeU-Xm-Ado"/>
+                <outlet property="signupButton" destination="ALG-3M-7wl" id="8Id-r0-jUF"/>
+                <outlet property="usernameField" destination="C70-sc-Tk2" id="hnv-k9-BMm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -48,8 +52,13 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="J9m-H7-KjI"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                    <connections>
+                        <action selector="updateDisplay:" destination="-1" eventType="editingChanged" id="u5y-hP-3ga"/>
+                        <outlet property="delegate" destination="-1" id="SLm-5c-yt6"/>
+                        <outlet property="nextControl" destination="bNq-Oe-DsJ" id="9b8-k4-1ka"/>
+                    </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pj0-Ed-uIC">
                     <rect key="frame" x="8" y="211" width="79" height="20"/>
@@ -66,8 +75,13 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="x2h-bp-nSd"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES"/>
+                    <connections>
+                        <action selector="updateDisplay:" destination="-1" eventType="editingChanged" id="KGe-hi-6Ex"/>
+                        <outlet property="delegate" destination="-1" id="mg4-8e-4b6"/>
+                        <outlet property="nextControl" destination="C70-sc-Tk2" id="Mg4-a6-HPj"/>
+                    </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALG-3M-7wl">
                     <rect key="frame" x="273" y="273" width="55" height="30"/>
@@ -80,6 +94,20 @@
                     </state>
                     <connections>
                         <action selector="signUp:" destination="-1" eventType="touchUpInside" id="Jbn-OC-vk6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ut-qJ-KzN">
+                    <rect key="frame" x="156" y="311" width="289" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="J8D-st-Xqs"/>
+                        <constraint firstAttribute="height" constant="30" id="znM-gs-4Jx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                    <state key="normal" title="Already have an account? Login Instead">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="login:" destination="-1" eventType="touchUpInside" id="nDa-hU-B63"/>
                     </connections>
                 </button>
             </subviews>
@@ -95,8 +123,10 @@
                 <constraint firstItem="n9K-qD-MrN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="PcU-ND-7jv"/>
                 <constraint firstItem="bNq-Oe-DsJ" firstAttribute="leading" secondItem="pj0-Ed-uIC" secondAttribute="trailing" constant="13" id="SRC-HL-4sk"/>
                 <constraint firstAttribute="centerX" secondItem="ALG-3M-7wl" secondAttribute="centerX" id="WQk-lv-zpR"/>
+                <constraint firstItem="6Ut-qJ-KzN" firstAttribute="top" secondItem="ALG-3M-7wl" secondAttribute="bottom" constant="8" id="Zhy-GQ-wop"/>
                 <constraint firstItem="bNq-Oe-DsJ" firstAttribute="top" secondItem="C70-sc-Tk2" secondAttribute="bottom" constant="22" id="jay-R2-Tau"/>
                 <constraint firstItem="pj0-Ed-uIC" firstAttribute="top" secondItem="e7m-h4-9Rr" secondAttribute="bottom" constant="31" id="kLV-oW-FOW"/>
+                <constraint firstAttribute="centerX" secondItem="6Ut-qJ-KzN" secondAttribute="centerX" id="n00-vW-2J6"/>
                 <constraint firstItem="pj0-Ed-uIC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="uSu-94-JLn"/>
                 <constraint firstItem="s1F-83-aAQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ucV-Dc-9Z0"/>
                 <constraint firstItem="e7m-h4-9Rr" firstAttribute="top" secondItem="n9K-qD-MrN" secondAttribute="bottom" constant="8" id="ur1-44-mKR"/>
