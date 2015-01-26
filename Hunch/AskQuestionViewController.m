@@ -38,7 +38,6 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     
     UIFont *font = [UIFont fontWithName:@"AmericanTypewriter" size:17];
     NSDictionary *attributes = [NSDictionary dictionaryWithObject:font
@@ -131,9 +130,14 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
                 DDLogError(@"Error during save question: %@", error);
             } else {
                 DDLogInfo(@"Question saved.");
+                [self performSelectorOnMainThread:@selector(dismiss) withObject:nil waitUntilDone:NO];
             }
         }];
     });
+}
+
+- (void)dismiss {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)displaySignUp {

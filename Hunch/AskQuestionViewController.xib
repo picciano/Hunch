@@ -81,6 +81,7 @@
                     <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="17"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
                     <connections>
+                        <action selector="updateDisplay:" destination="-1" eventType="editingChanged" id="y63-zb-BWr"/>
                         <outlet property="nextControl" destination="MXz-8S-fG1" id="Aqu-pX-8kc"/>
                     </connections>
                 </textField>
@@ -89,6 +90,7 @@
                     <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="17"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
                     <connections>
+                        <action selector="updateDisplay:" destination="-1" eventType="editingChanged" id="Wfq-uY-uV2"/>
                         <outlet property="nextControl" destination="O2Q-h2-ntP" id="h5J-cv-KWc"/>
                     </connections>
                 </textField>
@@ -97,6 +99,7 @@
                     <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="17"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
                     <connections>
+                        <action selector="updateDisplay:" destination="-1" eventType="editingChanged" id="OEJ-Jv-jM0"/>
                         <outlet property="nextControl" destination="ikA-SE-zya" id="4MR-f1-BpF"/>
                     </connections>
                 </textField>
