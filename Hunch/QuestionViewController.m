@@ -27,6 +27,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadEligibleQuestion];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadEligibleQuestion) name:CURRENT_USER_CHANGE_NOTIFICATION object:nil];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -61,6 +63,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 }
 
 - (void)loadEligibleQuestion {
+    self.currentQuestion = nil;
     PFQuery *myResponsesQuery = [PFQuery queryWithClassName:OBJECT_TYPE_RESPONSE];
     [myResponsesQuery whereKey:OBJECT_KEY_USER equalTo:[PFUser currentUser]];
     

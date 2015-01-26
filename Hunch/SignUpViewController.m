@@ -9,6 +9,7 @@
 #import "SignUpViewController.h"
 #import "CocoaLumberjack.h"
 #import "UIControl+NextControl.h"
+#import "Constants.h"
 #import <Parse/Parse.h>
 
 @interface SignUpViewController ()
@@ -64,7 +65,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
         } else {
             DDLogInfo(@"Signup completed.");
             [self dismissViewControllerAnimated:YES completion:^{
-                // notify
+                [[NSNotificationCenter defaultCenter] postNotificationName:CURRENT_USER_CHANGE_NOTIFICATION object:self];
             }];
         }
     }];
@@ -77,7 +78,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
         } else {
             DDLogInfo(@"Login completed.");
             [self dismissViewControllerAnimated:YES completion:^{
-                // notify
+                [[NSNotificationCenter defaultCenter] postNotificationName:CURRENT_USER_CHANGE_NOTIFICATION object:self];
             }];
         }
     }];

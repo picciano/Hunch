@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "SignUpViewController.h"
 #import "CocoaLumberjack.h"
 #import "Constants.h"
 #import <Parse/Parse.h>
@@ -17,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *accountCreatedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfAnswersLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfQuestionsLabel;
+@property (weak, nonatomic) IBOutlet UIButton *signupButton;
 
 @end
 
@@ -34,15 +36,25 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 }
 
 - (void)updateDisplay {
-    self.usernameLabel.text = [PFUser currentUser].username;
     if ([PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
         self.usernameLabel.text = @"Anonymous";
+        self.signupButton.hidden = NO;
+    } else {
+        self.usernameLabel.text = [PFUser currentUser].username;
+        self.signupButton.hidden = YES;
     }
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateStyle = NSDateFormatterMediumStyle;
     
     self.accountCreatedLabel.text = [dateFormatter stringFromDate:[PFUser currentUser].createdAt];
+}
+
+- (IBAction)signUp:(id)sender {
+    UIViewController *viewController = [[SignUpViewController alloc] initWithNibName:nil bundle:nil];
+    [self presentViewController:viewController animated:YES completion:^{
+        
+    }];
 }
 
 - (void)loadProfile {

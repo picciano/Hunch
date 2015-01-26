@@ -2,6 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController">
@@ -9,6 +12,7 @@
                 <outlet property="accountCreatedLabel" destination="OWu-BS-Za5" id="D5B-HY-d8H"/>
                 <outlet property="numberOfAnswersLabel" destination="gGe-4N-q06" id="7ss-Jo-r8i"/>
                 <outlet property="numberOfQuestionsLabel" destination="6KS-vd-vrF" id="duP-yA-con"/>
+                <outlet property="signupButton" destination="uM7-qT-eKH" id="Lgq-lj-xE5"/>
                 <outlet property="usernameLabel" destination="RT0-Jc-lu7" id="XXQ-R2-znd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,68 +23,116 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9U-3l-eGX">
-                    <rect key="frame" x="276" y="285" width="48" height="30"/>
+                    <rect key="frame" x="282" y="285" width="37" height="30"/>
                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
-                    <state key="normal" title="Cancel">
+                    <state key="normal" title="Done">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="BNX-ae-0f0"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3i-8E-sak">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3i-8E-sak">
                     <rect key="frame" x="8" y="8" width="84" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="84" id="ruu-BP-ZYa"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KS-vd-vrF">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KS-vd-vrF">
                     <rect key="frame" x="185" y="64" width="407" height="20"/>
                     <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGe-4N-q06">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGe-4N-q06">
                     <rect key="frame" x="185" y="36" width="407" height="20"/>
                     <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Answers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoI-pM-suU">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Answers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoI-pM-suU">
                     <rect key="frame" x="8" y="36" width="161" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="161" id="LWE-nO-7lK"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Questions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llQ-kV-kKV">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Questions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llQ-kV-kKV">
                     <rect key="frame" x="8" y="64" width="169" height="20"/>
                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RT0-Jc-lu7">
-                    <rect key="frame" x="100" y="8" width="492" height="20"/>
-                    <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWu-BS-Za5">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWu-BS-Za5">
                     <rect key="frame" x="152" y="92" width="440" height="20"/>
                     <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account Created" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kZ-tV-CQm">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Created" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kZ-tV-CQm">
                     <rect key="frame" x="8" y="92" width="136" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="136" id="TyD-aG-NkJ"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RT0-Jc-lu7">
+                    <rect key="frame" x="100" y="8" width="429" height="20"/>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uM7-qT-eKH">
+                    <rect key="frame" x="537" y="4" width="55" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="0E0-g5-FLU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                    <state key="normal" title="Sign Up">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="signUp:" destination="-1" eventType="touchUpInside" id="fzQ-pm-Ly3"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="S9U-3l-eGX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Q4m-LA-EKX"/>
-                <constraint firstItem="S9U-3l-eGX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="a2D-2q-EaV"/>
+                <constraint firstItem="XoI-pM-suU" firstAttribute="baseline" secondItem="gGe-4N-q06" secondAttribute="baseline" id="1Nh-f9-IMp"/>
+                <constraint firstItem="OWu-BS-Za5" firstAttribute="trailing" secondItem="6KS-vd-vrF" secondAttribute="trailing" id="1it-Io-oip"/>
+                <constraint firstItem="T3i-8E-sak" firstAttribute="top" secondItem="RT0-Jc-lu7" secondAttribute="top" id="2fq-Nb-stv"/>
+                <constraint firstItem="XoI-pM-suU" firstAttribute="leading" secondItem="T3i-8E-sak" secondAttribute="leading" id="6Uv-iQ-Bbb"/>
+                <constraint firstItem="S9U-3l-eGX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BEh-Pf-hU1"/>
+                <constraint firstItem="uM7-qT-eKH" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="CSp-eZ-bGa"/>
+                <constraint firstItem="uM7-qT-eKH" firstAttribute="baseline" secondItem="RT0-Jc-lu7" secondAttribute="firstBaseline" id="CfQ-Ze-Edy"/>
+                <constraint firstItem="OWu-BS-Za5" firstAttribute="leading" secondItem="4kZ-tV-CQm" secondAttribute="trailing" constant="8" symbolic="YES" id="DbX-0K-DVn"/>
+                <constraint firstItem="6KS-vd-vrF" firstAttribute="top" secondItem="llQ-kV-kKV" secondAttribute="top" id="Dje-if-fMN"/>
+                <constraint firstItem="gGe-4N-q06" firstAttribute="trailing" secondItem="uM7-qT-eKH" secondAttribute="trailing" id="HKW-91-6fE"/>
+                <constraint firstItem="RT0-Jc-lu7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="Hdm-4S-p07"/>
+                <constraint firstItem="llQ-kV-kKV" firstAttribute="leading" secondItem="4kZ-tV-CQm" secondAttribute="leading" id="IYi-1O-3x4"/>
+                <constraint firstItem="llQ-kV-kKV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="Jtb-fx-eRP"/>
+                <constraint firstItem="gGe-4N-q06" firstAttribute="leading" secondItem="XoI-pM-suU" secondAttribute="trailing" constant="16" id="MFq-ZX-3dP"/>
+                <constraint firstItem="4kZ-tV-CQm" firstAttribute="baseline" secondItem="OWu-BS-Za5" secondAttribute="baseline" id="Noo-nf-aTS"/>
+                <constraint firstItem="6KS-vd-vrF" firstAttribute="baseline" secondItem="llQ-kV-kKV" secondAttribute="baseline" id="OB5-Sc-UWD"/>
+                <constraint firstItem="gGe-4N-q06" firstAttribute="trailing" secondItem="6KS-vd-vrF" secondAttribute="trailing" id="OhR-eF-X1b"/>
+                <constraint firstItem="gGe-4N-q06" firstAttribute="top" secondItem="XoI-pM-suU" secondAttribute="top" id="Qbj-lz-u62"/>
+                <constraint firstItem="T3i-8E-sak" firstAttribute="baseline" secondItem="RT0-Jc-lu7" secondAttribute="baseline" id="U9v-xa-LMi"/>
+                <constraint firstItem="uM7-qT-eKH" firstAttribute="leading" secondItem="RT0-Jc-lu7" secondAttribute="trailing" constant="8" symbolic="YES" id="UAj-PQ-r56"/>
+                <constraint firstItem="RT0-Jc-lu7" firstAttribute="leading" secondItem="T3i-8E-sak" secondAttribute="trailing" constant="8" symbolic="YES" id="VSU-UN-T8J"/>
+                <constraint firstItem="S9U-3l-eGX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="XVg-Zm-FA4"/>
+                <constraint firstItem="llQ-kV-kKV" firstAttribute="leading" secondItem="XoI-pM-suU" secondAttribute="leading" id="Z7K-Xt-d2q"/>
+                <constraint firstItem="4kZ-tV-CQm" firstAttribute="top" secondItem="OWu-BS-Za5" secondAttribute="top" id="iIr-Sv-Ws0"/>
+                <constraint firstItem="4kZ-tV-CQm" firstAttribute="top" secondItem="llQ-kV-kKV" secondAttribute="bottom" constant="8" symbolic="YES" id="mqO-RY-Fc7"/>
+                <constraint firstItem="XoI-pM-suU" firstAttribute="top" secondItem="T3i-8E-sak" secondAttribute="bottom" constant="8" symbolic="YES" id="p8O-mX-Tgz"/>
+                <constraint firstItem="6KS-vd-vrF" firstAttribute="leading" secondItem="gGe-4N-q06" secondAttribute="leading" id="tf0-SN-u4d"/>
+                <constraint firstItem="llQ-kV-kKV" firstAttribute="top" secondItem="XoI-pM-suU" secondAttribute="bottom" constant="8" symbolic="YES" id="zSD-eD-9dO"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
         </view>

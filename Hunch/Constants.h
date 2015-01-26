@@ -30,5 +30,7 @@
 #define OBJECT_KEY_QUESTION_ID  @"questionId"
 #define OBJECT_KEY_TEXT         @"text"
 
+#define CURRENT_USER_CHANGE_NOTIFICATION    @"currentUserChange"
+
 
 #endif
