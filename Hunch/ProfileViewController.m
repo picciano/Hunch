@@ -16,7 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *accountCreatedLabel;
-@property (weak, nonatomic) IBOutlet UILabel *numberOfAnswersLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfResponsesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfQuestionsLabel;
 @property (weak, nonatomic) IBOutlet UIButton *signupButton;
 @property (nonatomic) int numberOfResponses;
@@ -48,7 +48,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
         self.signupButton.hidden = YES;
     }
     
-    self.numberOfAnswersLabel.text = [NSString stringWithFormat:@"%i", self.numberOfResponses];
+    self.numberOfResponsesLabel.text = [NSString stringWithFormat:@"%i", self.numberOfResponses];
     self.numberOfQuestionsLabel.text = [NSString stringWithFormat:@"%i", self.numberOfQuestions];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
