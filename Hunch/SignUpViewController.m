@@ -74,6 +74,14 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     [PFUser logInWithUsernameInBackground:self.usernameField.text password:self.passwordField.text block:^(PFUser *user, NSError *error) {
         if (error) {
             DDLogError(@"Error during login: %@", error);
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error logging in"
+                                                                           message:@"Check your username and password, or maybe try signing up instead."
+                                                                    preferredStyle:UIAlertControllerStyleActionSheet];
+            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK"
+                                                                    style:UIAlertActionStyleDefault
+                                                                  handler:^(UIAlertAction * action) {}];
+            [alert addAction:defaultAction];
+            [self presentViewController:alert animated:YES completion:nil];
         } else {
             DDLogInfo(@"Login completed.");
             [self dismissViewControllerAnimated:YES completion:^{
