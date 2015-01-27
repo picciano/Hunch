@@ -16,6 +16,7 @@
 #define ANSWER_NO               @"No"
 #define EMPTY_STRING            @""
 
+#define MINIMUM_QUESTION_LENGTH 12
 #define MAXIMUM_QUESTION_LENGTH 80
 #define MAXIMUM_ANSWER_LENGTH   30
 

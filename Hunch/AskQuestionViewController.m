@@ -100,10 +100,14 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     self.questionCharacterCountLabel.text = [NSString stringWithFormat:@"%lu / %i", (unsigned long)self.questionTextView.text.length, MAXIMUM_QUESTION_LENGTH];
     self.answer3Field.hidden = self.answer3Label.hidden = ([self questionType] == QuestionTypeYesNo);
     self.answer1Field.enabled = self.answer2Field.enabled = self.answer3Field.enabled = ([self questionType] == QuestionTypeCustom);
-    self.askQuestionButton.enabled = (self.answer1Field.text.length > 0 && self.answer2Field.text.length > 0 && self.questionTextView.text.length > 15);
+    self.askQuestionButton.enabled = (self.answer1Field.text.length > 0 && self.answer2Field.text.length > 0 && self.questionTextView.text.length >= MINIMUM_QUESTION_LENGTH);
 }
 
 - (IBAction)askQuestion:(id)sender {
+    if ([self.questionTextView.text characterAtIndex:self.questionTextView.text.length-1] != '?') {
+        self.questionTextView.text = [NSString stringWithFormat:@"%@?", self.questionTextView.text];
+    }
+    
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
     dispatch_async(queue, ^{
         PFObject *question = [PFObject objectWithClassName:OBJECT_TYPE_QUESTION];
