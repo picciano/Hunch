@@ -13,6 +13,8 @@
 #import <Parse/Parse.h>
 #import "CocoaLumberjack.h"
 
+#define VIEW_TAG_QUESTION   201
+
 @interface AskQuestionViewController ()
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *typeSegmentedControl;
@@ -61,8 +63,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
-    if (self.questionTextView.text.length > MAXIMUM_QUESTION_LENGTH) {
-        self.questionTextView.text = [self.questionTextView.text substringToIndex:MAXIMUM_QUESTION_LENGTH];
+    if (textView.tag == VIEW_TAG_QUESTION && textView.text.length > MAXIMUM_QUESTION_LENGTH) {
+        textView.text = [textView.text substringToIndex:MAXIMUM_QUESTION_LENGTH];
     }
     [self updateDisplay:nil];
 }
@@ -79,6 +81,14 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
         self.answer3Field.text = EMPTY_STRING;
     }
     [self updateDisplay:sender];
+}
+
+- (IBAction)answerChanged:(id)sender {
+    UITextField *textField = (UITextField *)sender;
+    if (textField.text.length > MAXIMUM_ANSWER_LENGTH) {
+        textField.text = [textField.text substringToIndex:MAXIMUM_ANSWER_LENGTH];
+    }
+    [self updateDisplay:nil];
 }
 
 - (IBAction)updateDisplay:(id)sender {

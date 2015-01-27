@@ -88,13 +88,12 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ut-qJ-KzN">
-                    <rect key="frame" x="156" y="311" width="289" height="30"/>
+                    <rect key="frame" x="154" y="311" width="292" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="J8D-st-Xqs"/>
-                        <constraint firstAttribute="height" constant="30" id="znM-gs-4Jx"/>
+                        <constraint firstAttribute="height" constant="30" id="9xN-Y4-Xww"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
-                    <state key="normal" title="Already have an account? Login Instead">
+                    <state key="normal" title="Already have an account? Login instead.">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -106,17 +105,17 @@
             <constraints>
                 <constraint firstItem="e7m-h4-9Rr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="7pu-do-RLG"/>
                 <constraint firstItem="C70-sc-Tk2" firstAttribute="leading" secondItem="e7m-h4-9Rr" secondAttribute="trailing" constant="8" id="99s-ct-3h9"/>
+                <constraint firstAttribute="centerX" secondItem="6Ut-qJ-KzN" secondAttribute="centerX" id="Bhh-Ka-0Vi"/>
                 <constraint firstAttribute="trailing" secondItem="bNq-Oe-DsJ" secondAttribute="trailing" constant="8" id="FYE-kl-qLQ"/>
                 <constraint firstAttribute="trailing" secondItem="n9K-qD-MrN" secondAttribute="trailing" constant="8" id="KUV-0i-Yta"/>
                 <constraint firstItem="ALG-3M-7wl" firstAttribute="top" secondItem="bNq-Oe-DsJ" secondAttribute="bottom" constant="35" id="PF9-fF-hm1"/>
                 <constraint firstItem="n9K-qD-MrN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="PcU-ND-7jv"/>
                 <constraint firstItem="bNq-Oe-DsJ" firstAttribute="leading" secondItem="pj0-Ed-uIC" secondAttribute="trailing" constant="13" id="SRC-HL-4sk"/>
                 <constraint firstAttribute="centerX" secondItem="ALG-3M-7wl" secondAttribute="centerX" id="WQk-lv-zpR"/>
-                <constraint firstItem="6Ut-qJ-KzN" firstAttribute="top" secondItem="ALG-3M-7wl" secondAttribute="bottom" constant="8" id="Zhy-GQ-wop"/>
                 <constraint firstItem="n9K-qD-MrN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="28" id="gwI-Ur-tA9"/>
                 <constraint firstItem="bNq-Oe-DsJ" firstAttribute="top" secondItem="C70-sc-Tk2" secondAttribute="bottom" constant="22" id="jay-R2-Tau"/>
                 <constraint firstItem="pj0-Ed-uIC" firstAttribute="top" secondItem="e7m-h4-9Rr" secondAttribute="bottom" constant="31" id="kLV-oW-FOW"/>
-                <constraint firstAttribute="centerX" secondItem="6Ut-qJ-KzN" secondAttribute="centerX" id="n00-vW-2J6"/>
+                <constraint firstItem="6Ut-qJ-KzN" firstAttribute="top" secondItem="ALG-3M-7wl" secondAttribute="bottom" constant="8" id="qVV-vH-5xS"/>
                 <constraint firstItem="pj0-Ed-uIC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="uSu-94-JLn"/>
                 <constraint firstItem="e7m-h4-9Rr" firstAttribute="top" secondItem="n9K-qD-MrN" secondAttribute="bottom" constant="8" id="ur1-44-mKR"/>
                 <constraint firstAttribute="trailing" secondItem="C70-sc-Tk2" secondAttribute="trailing" constant="8" id="wSX-9n-ttM"/>

@@ -17,6 +17,7 @@
 #define EMPTY_STRING            @""
 
 #define MAXIMUM_QUESTION_LENGTH 80
+#define MAXIMUM_ANSWER_LENGTH   30
 
 #define OBJECT_TYPE_QUESTION    @"Question"
 #define OBJECT_TYPE_ANSWER      @"Answer"

@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *numberOfAnswersLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfQuestionsLabel;
 @property (weak, nonatomic) IBOutlet UIButton *signupButton;
+@property (nonatomic) int numberOfResponses;
+@property (nonatomic) int numberOfQuestions;
 
 @end
 
@@ -29,6 +31,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadProfile];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadProfile) name:CURRENT_USER_CHANGE_NOTIFICATION object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -44,6 +48,9 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
         self.signupButton.hidden = YES;
     }
     
+    self.numberOfAnswersLabel.text = [NSString stringWithFormat:@"%i", self.numberOfResponses];
+    self.numberOfQuestionsLabel.text = [NSString stringWithFormat:@"%i", self.numberOfQuestions];
+    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateStyle = NSDateFormatterMediumStyle;
     
@@ -52,19 +59,30 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 - (IBAction)signUp:(id)sender {
     UIViewController *viewController = [[SignUpViewController alloc] initWithNibName:nil bundle:nil];
-    [self presentViewController:viewController animated:YES completion:^{
-        
-    }];
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+- (void)setNumberOfQuestions:(int)numberOfQuestions {
+    _numberOfQuestions = numberOfQuestions;
+    [self updateDisplay];
+}
+
+- (void)setNumberOfResponses:(int)numberOfResponses {
+    _numberOfResponses = numberOfResponses;
+    [self updateDisplay];
 }
 
 - (void)loadProfile {
+    self.numberOfQuestions = 0;
+    self.numberOfResponses = 0;
+    
     PFQuery *answers = [PFQuery queryWithClassName:OBJECT_TYPE_RESPONSE];
     [answers whereKey:OBJECT_KEY_USER equalTo:[PFUser currentUser]];
     [answers countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
         if (error) {
             DDLogError(@"Error counting responses: %@", error);
         } else {
-            self.numberOfAnswersLabel.text = [NSString stringWithFormat:@"%i", number];
+            self.numberOfResponses = number;
         }
     }];
     PFQuery *questions = [PFQuery queryWithClassName:OBJECT_TYPE_QUESTION];
@@ -73,7 +91,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
         if (error) {
             DDLogError(@"Error counting questions: %@", error);
         } else {
-            self.numberOfQuestionsLabel.text = [NSString stringWithFormat:@"%i", number];
+            self.numberOfQuestions = number;
         }
     }];
 }

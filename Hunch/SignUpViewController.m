@@ -56,7 +56,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error signing up"
                                                                            message:message
                                                                     preferredStyle:UIAlertControllerStyleActionSheet];
-            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK"
+            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Okay"
                                                                     style:UIAlertActionStyleDefault
                                                                   handler:^(UIAlertAction * action) {}];
             [alert addAction:defaultAction];
@@ -77,7 +77,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error logging in"
                                                                            message:@"Check your username and password, or maybe try signing up instead."
                                                                     preferredStyle:UIAlertControllerStyleActionSheet];
-            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK"
+            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Okay"
                                                                     style:UIAlertActionStyleDefault
                                                                   handler:^(UIAlertAction * action) {}];
             [alert addAction:defaultAction];

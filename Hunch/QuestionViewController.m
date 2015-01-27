@@ -119,7 +119,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No more questions"
                                                                                message:@"You have answered all the questions. We will keep checking and to see if any more questions get added."
                                                                         preferredStyle:UIAlertControllerStyleActionSheet];
-                UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK"
+                UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Okay"
                                                                         style:UIAlertActionStyleDefault
                                                                       handler:^(UIAlertAction * action) {
                                                                           self.suppressNoMoreQuestionsWarning = YES;
