@@ -103,11 +103,15 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     self.askQuestionButton.enabled = (self.answer1Field.text.length > 0 && self.answer2Field.text.length > 0 && self.questionTextView.text.length >= MINIMUM_QUESTION_LENGTH);
 }
 
-- (IBAction)askQuestion:(id)sender {
+- (void)cleanQuestion {
     self.questionTextView.text = [self.questionTextView.text stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceAndNewlineCharacterSet];
     if ([self.questionTextView.text characterAtIndex:self.questionTextView.text.length-1] != '?') {
         self.questionTextView.text = [NSString stringWithFormat:@"%@?", self.questionTextView.text];
     }
+}
+
+- (IBAction)askQuestion:(id)sender {
+    [self cleanQuestion];
     
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
     dispatch_async(queue, ^{
