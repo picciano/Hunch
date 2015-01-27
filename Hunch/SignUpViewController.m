@@ -53,14 +53,13 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
             if (code == 202) {
                 message = @"Sorry, that username has been taken. Pick another username or login instead.";
             }
-            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error signing up"
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error signing up"
                                                                            message:message
                                                                     preferredStyle:UIAlertControllerStyleActionSheet];
-            
-            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK"
+                                                                    style:UIAlertActionStyleDefault
                                                                   handler:^(UIAlertAction * action) {}];
             [alert addAction:defaultAction];
-            
             [self presentViewController:alert animated:YES completion:nil];
         } else {
             DDLogInfo(@"Signup completed.");

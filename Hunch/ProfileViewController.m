@@ -58,11 +58,11 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 }
 
 - (void)loadProfile {
-    PFQuery *answers = [PFQuery queryWithClassName:OBJECT_TYPE_ANSWER];
+    PFQuery *answers = [PFQuery queryWithClassName:OBJECT_TYPE_RESPONSE];
     [answers whereKey:OBJECT_KEY_USER equalTo:[PFUser currentUser]];
     [answers countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
         if (error) {
-            DDLogError(@"Error counting answers: %@", error);
+            DDLogError(@"Error counting responses: %@", error);
         } else {
             self.numberOfAnswersLabel.text = [NSString stringWithFormat:@"%i", number];
         }
