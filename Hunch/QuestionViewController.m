@@ -9,13 +9,17 @@
 #import "QuestionViewController.h"
 #import "AskQuestionViewController.h"
 #import "ProfileViewController.h"
+#import "AnswerButton.h"
 #import "Constants.h"
 #import <Parse/Parse.h>
 #import "CocoaLumberjack.h"
 
+#define VIEW_TAG_ANSWER_BUTTON_BASE 100
+
 @interface QuestionViewController ()
 
 @property (strong, nonatomic) PFObject *currentQuestion;
+@property (strong, nonatomic) NSArray *currentAnswers;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 
 @end
@@ -26,7 +30,6 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadEligibleQuestion];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadEligibleQuestion) name:CURRENT_USER_CHANGE_NOTIFICATION object:nil];
 }
@@ -47,6 +50,18 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 - (void)setCurrentQuestion:(PFObject *)currentQuestion {
     _currentQuestion = currentQuestion;
     [self updateDisplay:nil];
+    
+    PFRelation *answers = [self.currentQuestion relationForKey:OBJECT_KEY_ANSWERS];
+    PFQuery *answersQuery = [answers query];
+    [answersQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error) {
+            DDLogError(@"Error finding answers: %@", error);
+        } else {
+            DDLogDebug(@"Answers are loaded.");
+            self.currentAnswers = objects;
+            [self updateDisplay:nil];
+        }
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -55,6 +70,15 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 - (IBAction)updateDisplay:(id)sender {
     self.questionLabel.text = self.currentQuestion[OBJECT_KEY_TEXT];
+    for (int i = 0; i < 3; i++) {
+        NSInteger tag = i + VIEW_TAG_ANSWER_BUTTON_BASE;
+        AnswerButton *answerButton = (AnswerButton *)[self.view viewWithTag:tag];
+        if (i < self.currentAnswers.count) {
+            answerButton.answer = self.currentAnswers[i][OBJECT_KEY_TEXT];
+        } else {
+            answerButton.answer = nil;
+        }
+    }
 }
 
 - (IBAction)viewProfile:(id)sender {
@@ -62,8 +86,18 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
+- (IBAction)touchAnswer:(id)sender {
+    DDLogDebug(@"touchAnswer: called");
+    
+    PFObject *answer = self.currentAnswers[((UIView *)sender).tag - VIEW_TAG_ANSWER_BUTTON_BASE];
+    [self saveResponse:answer];
+}
+
 - (void)loadEligibleQuestion {
     self.currentQuestion = nil;
+    self.currentAnswers = nil;
+    [self updateDisplay:nil];
+    
     PFQuery *myResponsesQuery = [PFQuery queryWithClassName:OBJECT_TYPE_RESPONSE];
     [myResponsesQuery whereKey:OBJECT_KEY_USER equalTo:[PFUser currentUser]];
     
@@ -75,20 +109,16 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
         if (error) {
             DDLogError(@"Error loading eligible question: %@", error);
         } else {
-            DDLogDebug(@"OBJECT_KEY_TEXT: %@", object[OBJECT_KEY_TEXT]);
+            DDLogDebug(@"Question is loaded: %@", object[OBJECT_KEY_TEXT]);
             self.currentQuestion = object;
         }
     }];
 }
 
-- (void)saveResponse {
+- (void)saveResponse:(PFObject *)answer {
     PFObject *response = [PFObject objectWithClassName:OBJECT_TYPE_RESPONSE];
     response[OBJECT_KEY_QUESTION] = self.currentQuestion;
     response[OBJECT_KEY_USER] = [PFUser currentUser];
-    
-    PFRelation *answers = [self.currentQuestion relationForKey:OBJECT_KEY_ANSWERS];
-    PFQuery *answersQuery = [answers query];
-    PFObject *answer = [answersQuery getFirstObject];
     response[OBJECT_KEY_ANSWER] = answer;
     
     [response saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -96,6 +126,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
             DDLogError(@"Error during login: %@", error);
         } else {
             DDLogInfo(@"Response save completed.");
+            [self loadEligibleQuestion];
         }
     }];
 }

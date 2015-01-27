@@ -40,8 +40,10 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     
     if ([PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
         DDLogDebug(@"User is anonymous. Save it.");
-        [[PFUser currentUser] save];
-        [[NSNotificationCenter defaultCenter] postNotificationName:CURRENT_USER_CHANGE_NOTIFICATION object:self];
+        
+        [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:CURRENT_USER_CHANGE_NOTIFICATION object:self];
+        }];
     }
 }
 
