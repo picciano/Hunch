@@ -104,6 +104,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 }
 
 - (IBAction)askQuestion:(id)sender {
+    self.questionTextView.text = [self.questionTextView.text stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceAndNewlineCharacterSet];
     if ([self.questionTextView.text characterAtIndex:self.questionTextView.text.length-1] != '?') {
         self.questionTextView.text = [NSString stringWithFormat:@"%@?", self.questionTextView.text];
     }
