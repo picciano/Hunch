@@ -21,6 +21,7 @@
 @property (strong, nonatomic) PFObject *currentQuestion;
 @property (strong, nonatomic) NSArray *currentAnswers;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+@property (nonatomic) BOOL suppressNoMoreQuestionsWarning;
 
 @end
 
@@ -30,6 +31,10 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if (![PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
+        [self loadEligibleQuestion];
+    }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadEligibleQuestion) name:CURRENT_USER_CHANGE_NOTIFICATION object:nil];
 }
@@ -108,18 +113,24 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     [questionsQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         if (error) {
             DDLogError(@"Error loading eligible question: %@", error);
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No more questions"
-                                                                           message:@"You have answered all the questions. We will keep checking and to see if any more questions get added."
-                                                                    preferredStyle:UIAlertControllerStyleActionSheet];
-            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK"
-                                                                    style:UIAlertActionStyleDefault
-                                                                  handler:^(UIAlertAction * action) {
-                                                                      [self performSelector:@selector(loadEligibleQuestion) withObject:nil afterDelay:15];
-                                                                  }];
-            [alert addAction:defaultAction];
-            [self presentViewController:alert animated:YES completion:nil];
+            if (self.suppressNoMoreQuestionsWarning) {
+                [self performSelector:@selector(loadEligibleQuestion) withObject:nil afterDelay:5];
+            } else {
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No more questions"
+                                                                               message:@"You have answered all the questions. We will keep checking and to see if any more questions get added."
+                                                                        preferredStyle:UIAlertControllerStyleActionSheet];
+                UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK"
+                                                                        style:UIAlertActionStyleDefault
+                                                                      handler:^(UIAlertAction * action) {
+                                                                          self.suppressNoMoreQuestionsWarning = YES;
+                                                                          [self performSelector:@selector(loadEligibleQuestion) withObject:nil afterDelay:5];
+                                                                      }];
+                [alert addAction:defaultAction];
+                [self presentViewController:alert animated:YES completion:nil];
+            }
         } else {
             DDLogDebug(@"Question is loaded: %@", object[OBJECT_KEY_TEXT]);
+            self.suppressNoMoreQuestionsWarning = NO;
             self.currentQuestion = object;
         }
     }];
