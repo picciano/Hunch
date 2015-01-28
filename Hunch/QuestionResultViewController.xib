@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionResultViewController">
             <connections>
+                <outlet property="pieChart" destination="cFy-H4-hh5" id="n33-mv-Jsw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,9 +29,17 @@
                         <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="Q86-L3-0Kw"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFy-H4-hh5" customClass="PCPieChart">
+                    <rect key="frame" x="8" y="192" width="584" height="400"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="cFy-H4-hh5" firstAttribute="top" secondItem="5Zo-HG-ZlK" secondAttribute="bottom" constant="154" id="RpW-9l-RnB"/>
+                <constraint firstItem="cFy-H4-hh5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="VWi-PK-scr"/>
+                <constraint firstAttribute="bottom" secondItem="cFy-H4-hh5" secondAttribute="bottom" constant="8" id="Zl7-wi-EBH"/>
+                <constraint firstAttribute="trailing" secondItem="cFy-H4-hh5" secondAttribute="trailing" constant="8" id="ghk-8k-xVW"/>
                 <constraint firstItem="5Zo-HG-ZlK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="muW-p9-UfK"/>
                 <constraint firstAttribute="trailing" secondItem="5Zo-HG-ZlK" secondAttribute="trailing" constant="8" id="x8t-fI-vps"/>
             </constraints>

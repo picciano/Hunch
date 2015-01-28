@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "PCPieChart.h"
 
 @interface QuestionResultViewController : UIViewController
 
 @property (strong, nonatomic) PFObject *question;
+@property (strong, nonatomic) IBOutlet PCPieChart *pieChart;
 
 @end

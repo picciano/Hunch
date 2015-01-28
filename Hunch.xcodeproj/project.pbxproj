@@ -48,6 +48,7 @@
 		AFF9D8171A794A4C00756B02 /* PFObject+DateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF9D8161A794A4C00756B02 /* PFObject+DateFormat.m */; };
 		AFF9D81C1A79651E00756B02 /* QuestionResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF9D81A1A79651E00756B02 /* QuestionResultViewController.m */; };
 		AFF9D81D1A79651E00756B02 /* QuestionResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF9D81B1A79651E00756B02 /* QuestionResultViewController.xib */; };
+		AFF9D8211A7970AF00756B02 /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF9D8201A7970AF00756B02 /* PCPieChart.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,8 @@
 		AFF9D8191A79651E00756B02 /* QuestionResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionResultViewController.h; sourceTree = "<group>"; };
 		AFF9D81A1A79651E00756B02 /* QuestionResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionResultViewController.m; sourceTree = "<group>"; };
 		AFF9D81B1A79651E00756B02 /* QuestionResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionResultViewController.xib; sourceTree = "<group>"; };
+		AFF9D81F1A7970AF00756B02 /* PCPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCPieChart.h; sourceTree = "<group>"; };
+		AFF9D8201A7970AF00756B02 /* PCPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPieChart.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +194,7 @@
 				AFF84A431A705EB4003DA995 /* Sign Up View */,
 				AF1E707F1A704C0D00FE05CD /* Images.xcassets */,
 				AF1E70811A704C0D00FE05CD /* LaunchScreen.xib */,
+				AFF9D81E1A79708500756B02 /* honcheng/iOSPlot */,
 				AFE4D1051A7807D300C5377A /* Style Kit */,
 				AFE4D1041A7807BA00C5377A /* Extensions */,
 				AF1E70721A704C0D00FE05CD /* Supporting Files */,
@@ -344,6 +348,15 @@
 			name = "Question Result View";
 			sourceTree = "<group>";
 		};
+		AFF9D81E1A79708500756B02 /* honcheng/iOSPlot */ = {
+			isa = PBXGroup;
+			children = (
+				AFF9D81F1A7970AF00756B02 /* PCPieChart.h */,
+				AFF9D8201A7970AF00756B02 /* PCPieChart.m */,
+			);
+			name = honcheng/iOSPlot;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -477,6 +490,7 @@
 				AFF84A561A70619D003DA995 /* DDASLLogCapture.m in Sources */,
 				AFE4D1081A78156F00C5377A /* StyleKit.m in Sources */,
 				AFF84A471A705EEA003DA995 /* SignUpViewController.m in Sources */,
+				AFF9D8211A7970AF00756B02 /* PCPieChart.m in Sources */,
 				AFF9D8171A794A4C00756B02 /* PFObject+DateFormat.m in Sources */,
 				AF3E5A191A7694B4002574A1 /* UIControl+NextControl.m in Sources */,
 				AF1E70781A704C0D00FE05CD /* AppDelegate.m in Sources */,
