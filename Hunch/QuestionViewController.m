@@ -21,6 +21,7 @@
 @property (strong, nonatomic) PFObject *currentQuestion;
 @property (strong, nonatomic) NSArray *currentAnswers;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+@property (weak, nonatomic) IBOutlet UIButton *reportAbuseButton;
 @property (nonatomic) BOOL suppressNoMoreQuestionsWarning;
 
 @end
@@ -75,6 +76,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 - (IBAction)updateDisplay:(id)sender {
     self.questionLabel.text = self.currentQuestion[OBJECT_KEY_TEXT];
+    self.reportAbuseButton.hidden = (self.currentQuestion == nil);
     for (int i = 0; i < 3; i++) {
         NSInteger tag = i + VIEW_TAG_ANSWER_BUTTON_BASE;
         AnswerButton *answerButton = (AnswerButton *)[self.view viewWithTag:tag];
@@ -96,6 +98,16 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     
     PFObject *answer = self.currentAnswers[((UIView *)sender).tag - VIEW_TAG_ANSWER_BUTTON_BASE];
     [self saveResponse:answer];
+}
+
+- (IBAction)reportQuestion:(id)sender {
+    DDLogDebug(@"reportQuestion: called");
+    [self saveResponse:nil];
+    
+    PFObject *abuse = [PFObject objectWithClassName:OBJECT_TYPE_ABUSE];
+    abuse[OBJECT_KEY_QUESTION] = self.currentQuestion;
+    abuse[OBJECT_KEY_USER] = [PFUser currentUser];
+    [abuse saveInBackground];
 }
 
 - (void)loadEligibleQuestion {
@@ -140,7 +152,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     PFObject *response = [PFObject objectWithClassName:OBJECT_TYPE_RESPONSE];
     response[OBJECT_KEY_QUESTION] = self.currentQuestion;
     response[OBJECT_KEY_USER] = [PFUser currentUser];
-    response[OBJECT_KEY_ANSWER] = answer;
+    if (answer) response[OBJECT_KEY_ANSWER] = answer;
     
     [response saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (error) {

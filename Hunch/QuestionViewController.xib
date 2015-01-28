@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionViewController">
             <connections>
                 <outlet property="questionLabel" destination="MNT-mP-daz" id="NYk-Xv-o6T"/>
+                <outlet property="reportAbuseButton" destination="PMk-Uz-nS4" id="pir-Kb-dbP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -84,10 +85,24 @@
                         <action selector="touchAnswer:" destination="-1" eventType="touchDown" id="fPH-bO-9E0"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMk-Uz-nS4">
+                    <rect key="frame" x="205" y="477" width="190" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="Qac-A0-Gmi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="13"/>
+                    <state key="normal" title="Report inappropriate question">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="reportQuestion:" destination="-1" eventType="touchUpInside" id="sut-D9-q7g"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="MNT-mP-daz" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="2Oc-ks-Z7S"/>
+                <constraint firstAttribute="centerX" secondItem="PMk-Uz-nS4" secondAttribute="centerX" id="CaH-BZ-2Xb"/>
                 <constraint firstItem="MNT-mP-daz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="GRX-2c-6V3"/>
                 <constraint firstItem="MNT-mP-daz" firstAttribute="top" secondItem="Dsf-Sw-dNU" secondAttribute="bottom" constant="37" id="Hef-8l-Q4Q"/>
                 <constraint firstAttribute="trailing" secondItem="hOn-4w-YUD" secondAttribute="trailing" constant="8" id="Jeg-DJ-mrf"/>
@@ -100,6 +115,7 @@
                 <constraint firstAttribute="trailing" secondItem="4zm-Jp-cnV" secondAttribute="trailing" constant="8" id="p4k-vs-aOQ"/>
                 <constraint firstItem="hOn-4w-YUD" firstAttribute="top" secondItem="MNT-mP-daz" secondAttribute="bottom" constant="33" id="poz-oD-YJB"/>
                 <constraint firstAttribute="trailing" secondItem="5pX-G5-FRh" secondAttribute="trailing" constant="8" id="tON-XY-GP7"/>
+                <constraint firstItem="PMk-Uz-nS4" firstAttribute="top" secondItem="5pX-G5-FRh" secondAttribute="bottom" constant="1" id="vMw-U3-Npw"/>
                 <constraint firstItem="hOn-4w-YUD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="w2f-ho-fbC"/>
                 <constraint firstItem="aCa-8L-8JJ" firstAttribute="trailing" secondItem="Dsf-Sw-dNU" secondAttribute="trailing" id="wNA-Z2-w3n"/>
                 <constraint firstItem="Dsf-Sw-dNU" firstAttribute="trailing" secondItem="MNT-mP-daz" secondAttribute="trailing" id="x7R-5P-5aa"/>

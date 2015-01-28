@@ -23,6 +23,7 @@
 #define OBJECT_TYPE_QUESTION    @"Question"
 #define OBJECT_TYPE_ANSWER      @"Answer"
 #define OBJECT_TYPE_RESPONSE    @"Response"
+#define OBJECT_TYPE_ABUSE       @"Abuse"
 
 #define OBJECT_KEY_ID           @"objectId"
 #define OBJECT_KEY_USER         @"user"
