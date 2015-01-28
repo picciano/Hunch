@@ -41,6 +41,10 @@
 		AFF84A591A7061B5003DA995 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF84A581A7061B5003DA995 /* DDASLLogger.m */; };
 		AFF84A5C1A7061C4003DA995 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF84A5B1A7061C4003DA995 /* DDTTYLogger.m */; };
 		AFF84A5F1A7061D4003DA995 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF84A5E1A7061D4003DA995 /* DDFileLogger.m */; };
+		AFF9D80E1A793FE400756B02 /* QuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF9D80C1A793FE400756B02 /* QuestionTableViewCell.m */; };
+		AFF9D80F1A793FE400756B02 /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF9D80D1A793FE400756B02 /* QuestionTableViewCell.xib */; };
+		AFF9D8131A793FF300756B02 /* AchievementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF9D8111A793FF300756B02 /* AchievementTableViewCell.m */; };
+		AFF9D8141A793FF300756B02 /* AchievementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF9D8121A793FF300756B02 /* AchievementTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +113,12 @@
 		AFF84A5B1A7061C4003DA995 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
 		AFF84A5D1A7061D4003DA995 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
 		AFF84A5E1A7061D4003DA995 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		AFF9D80B1A793FE400756B02 /* QuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewCell.h; sourceTree = "<group>"; };
+		AFF9D80C1A793FE400756B02 /* QuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewCell.m; sourceTree = "<group>"; };
+		AFF9D80D1A793FE400756B02 /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
+		AFF9D8101A793FF300756B02 /* AchievementTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementTableViewCell.h; sourceTree = "<group>"; };
+		AFF9D8111A793FF300756B02 /* AchievementTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementTableViewCell.m; sourceTree = "<group>"; };
+		AFF9D8121A793FF300756B02 /* AchievementTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AchievementTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +265,12 @@
 				AF3E5A1B1A76F3EF002574A1 /* ProfileViewController.h */,
 				AF3E5A1C1A76F3EF002574A1 /* ProfileViewController.m */,
 				AF3E5A1D1A76F3EF002574A1 /* ProfileViewController.xib */,
+				AFF9D80B1A793FE400756B02 /* QuestionTableViewCell.h */,
+				AFF9D80C1A793FE400756B02 /* QuestionTableViewCell.m */,
+				AFF9D80D1A793FE400756B02 /* QuestionTableViewCell.xib */,
+				AFF9D8101A793FF300756B02 /* AchievementTableViewCell.h */,
+				AFF9D8111A793FF300756B02 /* AchievementTableViewCell.m */,
+				AFF9D8121A793FF300756B02 /* AchievementTableViewCell.xib */,
 			);
 			name = "Profile View";
 			sourceTree = "<group>";
@@ -390,10 +406,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3E5A1F1A76F3EF002574A1 /* ProfileViewController.xib in Resources */,
+				AFF9D8141A793FF300756B02 /* AchievementTableViewCell.xib in Resources */,
 				AFF84A481A705EEA003DA995 /* SignUpViewController.xib in Resources */,
 				AF1E70C01A70585900FE05CD /* AskQuestionViewController.xib in Resources */,
 				AF1E70831A704C0D00FE05CD /* LaunchScreen.xib in Resources */,
 				AF1E70801A704C0D00FE05CD /* Images.xcassets in Resources */,
+				AFF9D80F1A793FE400756B02 /* QuestionTableViewCell.xib in Resources */,
 				AF1E709E1A70500D00FE05CD /* QuestionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +447,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFF84A591A7061B5003DA995 /* DDASLLogger.m in Sources */,
+				AFF9D8131A793FF300756B02 /* AchievementTableViewCell.m in Sources */,
+				AFF9D80E1A793FE400756B02 /* QuestionTableViewCell.m in Sources */,
 				AFF84A511A70611D003DA995 /* DDLog.m in Sources */,
 				AF1E70BF1A70585900FE05CD /* AskQuestionViewController.m in Sources */,
 				AFF84A5C1A7061C4003DA995 /* DDTTYLogger.m in Sources */,
