@@ -34,7 +34,7 @@ typedef enum {
 
 @end
 
-static const DDLogLevel ddLogLevel = DDLogLevelDebug;
+static const DDLogLevel ddLogLevel = DDLogLevelError;
 
 @implementation AskQuestionViewController
 
