@@ -32,6 +32,7 @@
 		AF3E5A191A7694B4002574A1 /* UIControl+NextControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3E5A181A7694B4002574A1 /* UIControl+NextControl.m */; };
 		AF3E5A1E1A76F3EF002574A1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3E5A1C1A76F3EF002574A1 /* ProfileViewController.m */; };
 		AF3E5A1F1A76F3EF002574A1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3E5A1D1A76F3EF002574A1 /* ProfileViewController.xib */; };
+		AFBAC3CA1A799F0E001BECCA /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBAC3C91A799F0E001BECCA /* iAd.framework */; };
 		AFE4D1081A78156F00C5377A /* StyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4D1071A78156F00C5377A /* StyleKit.m */; };
 		AFE4D10E1A781D0500C5377A /* AnswerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4D10D1A781D0500C5377A /* AnswerButton.m */; };
 		AFF84A471A705EEA003DA995 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF84A451A705EEA003DA995 /* SignUpViewController.m */; };
@@ -97,6 +98,7 @@
 		AF3E5A1B1A76F3EF002574A1 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		AF3E5A1C1A76F3EF002574A1 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		AF3E5A1D1A76F3EF002574A1 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		AFBAC3C91A799F0E001BECCA /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		AFE4D1061A78156F00C5377A /* StyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleKit.h; sourceTree = "<group>"; };
 		AFE4D1071A78156F00C5377A /* StyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleKit.m; sourceTree = "<group>"; };
 		AFE4D10C1A781D0500C5377A /* AnswerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerButton.h; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFBAC3CA1A799F0E001BECCA /* iAd.framework in Frameworks */,
 				AF1E70B91A70548600FE05CD /* libsqlite3.dylib in Frameworks */,
 				AF1E70B71A70547E00FE05CD /* libz.dylib in Frameworks */,
 				AF1E70B51A70547600FE05CD /* SystemConfiguration.framework in Frameworks */,
@@ -245,6 +248,7 @@
 		AF1E709F1A7053B800FE05CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFBAC3C91A799F0E001BECCA /* iAd.framework */,
 				AF1E70B81A70548600FE05CD /* libsqlite3.dylib */,
 				AF1E70B61A70547E00FE05CD /* libz.dylib */,
 				AF1E70B41A70547600FE05CD /* SystemConfiguration.framework */,

@@ -18,20 +18,24 @@
 
 @interface QuestionViewController ()
 
-@property (strong, nonatomic) PFObject *currentQuestion;
-@property (strong, nonatomic) NSArray *currentAnswers;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *reportAbuseButton;
+@property (weak, nonatomic) IBOutlet ADBannerView *adBanner;
+
+@property (strong, nonatomic) PFObject *currentQuestion;
+@property (strong, nonatomic) NSArray *currentAnswers;
 @property (nonatomic) BOOL suppressNoMoreQuestionsWarning;
 
 @end
 
-static const DDLogLevel ddLogLevel = DDLogLevelError;
+static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 @implementation QuestionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.adBanner.alpha = 0.0;
     
     if (![PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
         [self loadEligibleQuestion];
@@ -136,7 +140,6 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
     
     [questionsQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         if (error) {
-            DDLogError(@"Error loading eligible question: %@", error);
             if (self.suppressNoMoreQuestionsWarning) {
                 [self performSelector:@selector(loadEligibleQuestion) withObject:nil afterDelay:5];
             } else {
@@ -172,7 +175,42 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
         } else {
             DDLogInfo(@"Response save completed.");
             [self loadEligibleQuestion];
+            [self requestInterstitialAdPresentation];
         }
+    }];
+}
+
+#pragma - ADBannerViewDelegate methods
+
+- (void)bannerViewWillLoadAd:(ADBannerView *)banner {
+    DDLogInfo(@"Ad Banner will load ad.");
+    
+    // Show the ad banner.
+    [UIView animateWithDuration:0.5 animations:^{
+        self.adBanner.alpha = 1.0;
+    }];
+}
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
+    DDLogInfo(@"Ad Banner did load ad.");
+}
+
+- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave {
+    NSLog(@"Ad Banner action is about to begin.");
+    
+    return YES;
+}
+
+- (void)bannerViewActionDidFinish:(ADBannerView *)banner {
+    NSLog(@"Ad Banner action did finish");
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+    NSLog(@"Unable to show ads. Error: %@", [error localizedDescription]);
+    
+    // Hide the ad banner.
+    [UIView animateWithDuration:0.5 animations:^{
+        self.adBanner.alpha = 0.0;
     }];
 }
 

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-@interface QuestionViewController : UIViewController
+@interface QuestionViewController : UIViewController <ADBannerViewDelegate>
 
 @end

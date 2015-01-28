@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionViewController">
             <connections>
+                <outlet property="adBanner" destination="QuA-br-Aoj" id="NJt-qr-Cdm"/>
                 <outlet property="questionLabel" destination="MNT-mP-daz" id="NYk-Xv-o6T"/>
                 <outlet property="reportAbuseButton" destination="PMk-Uz-nS4" id="pir-Kb-dbP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -98,16 +99,27 @@
                         <action selector="reportQuestion:" destination="-1" eventType="touchUpInside" id="sut-D9-q7g"/>
                     </connections>
                 </button>
+                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="QuA-br-Aoj">
+                    <rect key="frame" x="140" y="550" width="320" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="deO-Sw-duP"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="gel-0T-bnr"/>
+                    </connections>
+                </adBannerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="MNT-mP-daz" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="2Oc-ks-Z7S"/>
+                <constraint firstAttribute="bottom" secondItem="QuA-br-Aoj" secondAttribute="bottom" id="Adr-N0-hn5"/>
                 <constraint firstAttribute="centerX" secondItem="PMk-Uz-nS4" secondAttribute="centerX" id="CaH-BZ-2Xb"/>
                 <constraint firstItem="MNT-mP-daz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="GRX-2c-6V3"/>
                 <constraint firstItem="MNT-mP-daz" firstAttribute="top" secondItem="Dsf-Sw-dNU" secondAttribute="bottom" constant="37" id="Hef-8l-Q4Q"/>
                 <constraint firstAttribute="trailing" secondItem="hOn-4w-YUD" secondAttribute="trailing" constant="8" id="Jeg-DJ-mrf"/>
                 <constraint firstItem="aCa-8L-8JJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="LBy-Bg-c3O"/>
                 <constraint firstItem="4zm-Jp-cnV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="P5R-Y8-xCH"/>
+                <constraint firstAttribute="centerX" secondItem="QuA-br-Aoj" secondAttribute="centerX" id="PbO-23-qFV"/>
                 <constraint firstItem="5pX-G5-FRh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Rlh-a6-yak"/>
                 <constraint firstItem="5pX-G5-FRh" firstAttribute="top" secondItem="4zm-Jp-cnV" secondAttribute="bottom" constant="8" id="U7i-cf-B0A"/>
                 <constraint firstItem="4zm-Jp-cnV" firstAttribute="top" secondItem="hOn-4w-YUD" secondAttribute="bottom" constant="8" id="Wch-06-Em8"/>
