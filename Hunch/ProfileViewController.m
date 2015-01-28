@@ -10,6 +10,7 @@
 #import "SignUpViewController.h"
 #import "QuestionTableViewCell.h"
 #import "AchievementTableViewCell.h"
+#import "QuestionResultViewController.h"
 #import "CocoaLumberjack.h"
 #import "Constants.h"
 #import <Parse/Parse.h>
@@ -213,20 +214,26 @@ static NSString *kQuestionReuseIdentifier = @"kQuestionReuseIdentifier";
  }
  */
 
-/*
- #pragma mark - Table view delegate
+#pragma mark - Table view delegate
  
- // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
- - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
- // Navigation logic may go here, for example:
- // Create the next view controller.
- <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
- 
- // Pass the selected object to the new view controller.
- 
- // Push the view controller.
- [self.navigationController pushViewController:detailViewController animated:YES];
- }
- */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case 0:
+            [self navigateToQuestionResultsViewWithIndex:indexPath.row];
+            break;
+            
+        case 1:
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)navigateToQuestionResultsViewWithIndex:(NSInteger)index {
+    QuestionResultViewController *viewController = [[QuestionResultViewController alloc] initWithNibName:nil bundle:nil];
+    viewController.question = self.questions[index];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
 
 @end
