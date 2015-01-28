@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionTableViewCell"/>
@@ -13,19 +14,29 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOU-DZ-jNJ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOU-DZ-jNJ">
                         <rect key="frame" x="8" y="1" width="304" height="21"/>
                         <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgF-q9-haX">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgF-q9-haX">
                         <rect key="frame" x="8" y="20" width="304" height="21"/>
                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="FgF-q9-haX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="12" id="Bl8-Fd-UWA"/>
+                    <constraint firstItem="wOU-DZ-jNJ" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="FjU-3J-dmt"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="wOU-DZ-jNJ" secondAttribute="bottom" constant="13" id="e7W-hG-dHY"/>
+                    <constraint firstItem="FgF-q9-haX" firstAttribute="trailing" secondItem="wOU-DZ-jNJ" secondAttribute="trailing" id="glJ-02-RV7"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="FgF-q9-haX" secondAttribute="bottom" constant="-6" id="hbv-8U-rY0"/>
+                    <constraint firstItem="FgF-q9-haX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="iqa-t0-jOB"/>
+                    <constraint firstItem="wOU-DZ-jNJ" firstAttribute="leading" secondItem="FgF-q9-haX" secondAttribute="leading" id="kPR-LS-ygz"/>
+                    <constraint firstItem="wOU-DZ-jNJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-7" id="xsx-0E-H2e"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="questionCreatedAtLabel" destination="FgF-q9-haX" id="h6G-TN-JsL"/>
