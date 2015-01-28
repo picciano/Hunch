@@ -45,6 +45,7 @@
 		AFF9D80F1A793FE400756B02 /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF9D80D1A793FE400756B02 /* QuestionTableViewCell.xib */; };
 		AFF9D8131A793FF300756B02 /* AchievementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF9D8111A793FF300756B02 /* AchievementTableViewCell.m */; };
 		AFF9D8141A793FF300756B02 /* AchievementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF9D8121A793FF300756B02 /* AchievementTableViewCell.xib */; };
+		AFF9D8171A794A4C00756B02 /* PFObject+DateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF9D8161A794A4C00756B02 /* PFObject+DateFormat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,8 @@
 		AFF9D8101A793FF300756B02 /* AchievementTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementTableViewCell.h; sourceTree = "<group>"; };
 		AFF9D8111A793FF300756B02 /* AchievementTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementTableViewCell.m; sourceTree = "<group>"; };
 		AFF9D8121A793FF300756B02 /* AchievementTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AchievementTableViewCell.xib; sourceTree = "<group>"; };
+		AFF9D8151A794A4C00756B02 /* PFObject+DateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFObject+DateFormat.h"; sourceTree = "<group>"; };
+		AFF9D8161A794A4C00756B02 /* PFObject+DateFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFObject+DateFormat.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +283,8 @@
 			children = (
 				AF3E5A171A7694B4002574A1 /* UIControl+NextControl.h */,
 				AF3E5A181A7694B4002574A1 /* UIControl+NextControl.m */,
+				AFF9D8151A794A4C00756B02 /* PFObject+DateFormat.h */,
+				AFF9D8161A794A4C00756B02 /* PFObject+DateFormat.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -455,6 +460,7 @@
 				AFF84A561A70619D003DA995 /* DDASLLogCapture.m in Sources */,
 				AFE4D1081A78156F00C5377A /* StyleKit.m in Sources */,
 				AFF84A471A705EEA003DA995 /* SignUpViewController.m in Sources */,
+				AFF9D8171A794A4C00756B02 /* PFObject+DateFormat.m in Sources */,
 				AF3E5A191A7694B4002574A1 /* UIControl+NextControl.m in Sources */,
 				AF1E70781A704C0D00FE05CD /* AppDelegate.m in Sources */,
 				AF1E70751A704C0D00FE05CD /* main.m in Sources */,

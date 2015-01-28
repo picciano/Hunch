@@ -13,6 +13,7 @@
 #import "CocoaLumberjack.h"
 #import "Constants.h"
 #import <Parse/Parse.h>
+#import "PFObject+DateFormat.h"
 
 @interface ProfileViewController ()
 
@@ -23,7 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *signupButton;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) int numberOfResponses;
-@property (nonatomic) int numberOfQuestions;
+@property (nonatomic) NSArray *questions;
 
 @end
 
@@ -60,22 +61,13 @@ static NSString *kQuestionReuseIdentifier = @"kQuestionReuseIdentifier";
     }
     
     self.numberOfResponsesLabel.text = [NSString stringWithFormat:@"%i", self.numberOfResponses];
-    self.numberOfQuestionsLabel.text = [NSString stringWithFormat:@"%i", self.numberOfQuestions];
-    
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateStyle = NSDateFormatterMediumStyle;
-    
-    self.accountCreatedLabel.text = [dateFormatter stringFromDate:[PFUser currentUser].createdAt];
+    self.numberOfQuestionsLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.questions.count];
+    self.accountCreatedLabel.text = [[PFUser currentUser] createdAtWithDateFormat:NSDateFormatterMediumStyle];
 }
 
 - (IBAction)signUp:(id)sender {
     UIViewController *viewController = [[SignUpViewController alloc] initWithNibName:nil bundle:nil];
     [self presentViewController:viewController animated:YES completion:nil];
-}
-
-- (void)setNumberOfQuestions:(int)numberOfQuestions {
-    _numberOfQuestions = numberOfQuestions;
-    [self updateDisplay];
 }
 
 - (void)setNumberOfResponses:(int)numberOfResponses {
@@ -84,7 +76,7 @@ static NSString *kQuestionReuseIdentifier = @"kQuestionReuseIdentifier";
 }
 
 - (void)loadProfile {
-    self.numberOfQuestions = 0;
+    self.questions = [NSArray array];
     self.numberOfResponses = 0;
     
     PFQuery *answers = [PFQuery queryWithClassName:OBJECT_TYPE_RESPONSE];
@@ -98,11 +90,13 @@ static NSString *kQuestionReuseIdentifier = @"kQuestionReuseIdentifier";
     }];
     PFQuery *questions = [PFQuery queryWithClassName:OBJECT_TYPE_QUESTION];
     [questions whereKey:OBJECT_KEY_USER equalTo:[PFUser currentUser]];
-    [questions countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
+    [questions orderByDescending:OBJECT_KEY_CREATED_AT];
+    [questions findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
-            DDLogError(@"Error counting questions: %@", error);
+            DDLogError(@"Could not load questions: %@", error);
         } else {
-            self.numberOfQuestions = number;
+            self.questions = objects;
+            [self.tableView reloadData];
         }
     }];
 }
@@ -118,11 +112,23 @@ static NSString *kQuestionReuseIdentifier = @"kQuestionReuseIdentifier";
 #pragma - UITableViewDelegate and UITableViewDataSource methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    switch (section) {
+        case 0:
+            return self.questions.count;
+            break;
+            
+        case 1:
+            return 5;
+            break;
+            
+        default:
+            return 0;
+            break;
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -159,9 +165,7 @@ static NSString *kQuestionReuseIdentifier = @"kQuestionReuseIdentifier";
 
 - (QuestionTableViewCell *)tableView:(UITableView *)tableView questionTableViewCellAtIndexPath:(NSIndexPath *)indexPath {
     QuestionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kQuestionReuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    cell.textLabel.text = @"Question entry...";
+    cell.question = self.questions[indexPath.row];
     
     return cell;
 }

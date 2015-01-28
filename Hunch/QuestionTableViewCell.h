@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface QuestionTableViewCell : UITableViewCell
+
+@property (strong, nonatomic) PFObject *question;
 
 @end
