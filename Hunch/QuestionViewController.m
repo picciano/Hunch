@@ -102,12 +102,16 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 - (IBAction)reportQuestion:(id)sender {
     DDLogDebug(@"reportQuestion: called");
-    [self saveResponse:nil];
     
     PFObject *abuse = [PFObject objectWithClassName:OBJECT_TYPE_ABUSE];
     abuse[OBJECT_KEY_QUESTION] = self.currentQuestion;
     abuse[OBJECT_KEY_USER] = [PFUser currentUser];
-    [abuse saveInBackground];
+    [abuse saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error) {
+            DDLogError(@"Error during reporting abuse: %@", error);
+        }
+        [self loadEligibleQuestion];
+    }];
 }
 
 - (void)loadEligibleQuestion {
