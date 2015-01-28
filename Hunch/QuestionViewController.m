@@ -110,6 +110,14 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
         if (error) {
             DDLogError(@"Error during reporting abuse: %@", error);
         }
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Abuse Has Been Reported"
+                                                                       message:@"Thank you for your report. We will look at the question and take appropriate action."
+                                                                preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Okay"
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {}];
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
         [self loadEligibleQuestion];
     }];
 }
