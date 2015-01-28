@@ -96,6 +96,11 @@
     _sameColorLabel = YES;
 }
 
+- (void)setComponents:(NSMutableArray *)components {
+    _components = components;
+    [self setNeedsDisplay];
+}
+
 #define LABEL_TOP_MARGIN 15
 #define ARROW_HEAD_LENGTH 6
 #define ARROW_HEAD_WIDTH 4

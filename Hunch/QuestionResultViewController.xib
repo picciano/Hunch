@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionResultViewController">
             <connections>
                 <outlet property="pieChart" destination="cFy-H4-hh5" id="n33-mv-Jsw"/>
+                <outlet property="questionLabel" destination="V3p-hm-nzP" id="SVt-d5-YaZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,13 +34,25 @@
                     <rect key="frame" x="8" y="192" width="584" height="400"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3p-hm-nzP">
+                    <rect key="frame" x="8" y="68" width="584" height="74"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="74" id="P6R-iZ-QLC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="V3p-hm-nzP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="LOX-e8-xlJ"/>
                 <constraint firstItem="cFy-H4-hh5" firstAttribute="top" secondItem="5Zo-HG-ZlK" secondAttribute="bottom" constant="154" id="RpW-9l-RnB"/>
+                <constraint firstAttribute="trailing" secondItem="V3p-hm-nzP" secondAttribute="trailing" constant="8" id="VIx-3E-TPh"/>
                 <constraint firstItem="cFy-H4-hh5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="VWi-PK-scr"/>
                 <constraint firstAttribute="bottom" secondItem="cFy-H4-hh5" secondAttribute="bottom" constant="8" id="Zl7-wi-EBH"/>
                 <constraint firstAttribute="trailing" secondItem="cFy-H4-hh5" secondAttribute="trailing" constant="8" id="ghk-8k-xVW"/>
+                <constraint firstItem="V3p-hm-nzP" firstAttribute="top" secondItem="5Zo-HG-ZlK" secondAttribute="bottom" constant="30" id="hjl-H4-zVx"/>
                 <constraint firstItem="5Zo-HG-ZlK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="muW-p9-UfK"/>
                 <constraint firstAttribute="trailing" secondItem="5Zo-HG-ZlK" secondAttribute="trailing" constant="8" id="x8t-fI-vps"/>
             </constraints>
