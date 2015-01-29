@@ -104,7 +104,11 @@ NSUInteger countsRemaining;
         [components addObject:component];
     }
     
+    pieChart.alpha = 0.0;
     [pieChart setComponents:components];
+    [UIView animateWithDuration:0.5 animations:^{
+        pieChart.alpha = 1.0;
+    }];
 }
 
 - (IBAction)dismiss:(id)sender {
