@@ -21,9 +21,11 @@
 
 @end
 
-static const DDLogLevel ddLogLevel = DDLogLevelError;
+static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 @implementation QuestionResultViewController
+
+NSUInteger countsRemaining;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,7 +38,6 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
 
 - (void)updateDisplay {
     self.questionLabel.text = self.question[OBJECT_KEY_TEXT];
-    [self configurePieChart];
 }
 
 - (void)loadAnswers {
@@ -48,7 +49,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
         } else {
             DDLogDebug(@"Answers are loaded.");
             self.answers = objects;
-            self.responseCounts = [NSMutableArray arrayWithObjects:@1, @1, @1, nil];
+            self.responseCounts = [NSMutableArray arrayWithObjects:@0, @0, @0, nil];
+            countsRemaining = objects.count;
             [self loadResponseCounts];
         }
     }];
@@ -56,12 +58,18 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
 
 - (void)loadResponseCounts {
     for (int i = 0; i < self.answers.count; i++) {
-        PFQuery *query = [PFQuery queryWithClassName:OBJECT_TYPE_RESPONSE];
-        [query whereKey:OBJECT_KEY_ANSWER equalTo:self.answers[i]];
-        [query countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
-            self.responseCounts[i] = [NSNumber numberWithInt:number];
-            [self updateDisplay];
-        }];
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+        dispatch_async(queue, ^{
+            PFQuery *query = [PFQuery queryWithClassName:OBJECT_TYPE_RESPONSE];
+            [query whereKey:OBJECT_KEY_ANSWER equalTo:self.answers[i]];
+            self.responseCounts[i] = [NSNumber numberWithLong:[query countObjects]];
+            countsRemaining--;
+            if (countsRemaining == 0) {
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    [self configurePieChart];
+                });
+            }
+        });
     }
 }
 
