@@ -186,9 +186,11 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     DDLogInfo(@"Ad Banner will load ad.");
     
     // Show the ad banner.
+    self.adBanner.alpha = 0.0;
+    self.adBanner.hidden = NO;
     [UIView animateWithDuration:0.5 animations:^{
         self.adBanner.alpha = 1.0;
-    }];
+    } completion:nil];
 }
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner {
@@ -211,6 +213,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     // Hide the ad banner.
     [UIView animateWithDuration:0.5 animations:^{
         self.adBanner.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        self.adBanner.hidden = YES;
     }];
 }
 
