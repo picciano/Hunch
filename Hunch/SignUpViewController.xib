@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -19,29 +19,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9K-qD-MrN">
-                    <rect key="frame" x="8" y="28" width="584" height="124"/>
+                    <rect key="frame" x="8" y="8" width="584" height="80"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="124" id="Nf2-Dc-FzM"/>
+                        <constraint firstAttribute="height" constant="80" id="ew7-Uj-PBP"/>
                     </constraints>
-                    <string key="text">Before asking a question, we need you to add a username and password to your account. This will allow you to come back and see the answers. Really, that's the whole point of asking a question in the first place.</string>
+                    <string key="text">Before asking a question, we need you to add a username and password to your account. This will allow you to come back and see the answers.</string>
                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7m-h4-9Rr">
-                    <rect key="frame" x="8" y="160" width="84" height="20"/>
+                    <rect key="frame" x="8" y="100" width="84" height="20"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="84" id="2Cy-nS-ITV"/>
-                        <constraint firstAttribute="height" constant="20" id="b86-RZ-5Ic"/>
+                        <constraint firstAttribute="height" constant="20" id="FgN-Sh-lfy"/>
+                        <constraint firstAttribute="width" constant="84" id="ktc-Pi-3Sh"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C70-sc-Tk2">
-                    <rect key="frame" x="100" y="156" width="492" height="30"/>
+                    <rect key="frame" x="100" y="96" width="492" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="J9m-H7-KjI"/>
+                        <constraint firstAttribute="height" constant="30" id="Da3-Ep-FaB"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
@@ -52,19 +52,19 @@
                     </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pj0-Ed-uIC">
-                    <rect key="frame" x="8" y="211" width="79" height="20"/>
+                    <rect key="frame" x="8" y="137" width="79" height="20"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="20" id="f4I-YK-bxg"/>
-                        <constraint firstAttribute="width" constant="79" id="wnQ-sK-Cai"/>
+                        <constraint firstAttribute="width" constant="79" id="d2Q-vI-VIr"/>
+                        <constraint firstAttribute="height" constant="20" id="mdo-nB-ddB"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bNq-Oe-DsJ">
-                    <rect key="frame" x="100" y="208" width="492" height="30"/>
+                    <rect key="frame" x="100" y="134" width="492" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="x2h-bp-nSd"/>
+                        <constraint firstAttribute="height" constant="30" id="MPL-bf-dTm"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES"/>
@@ -75,9 +75,10 @@
                     </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALG-3M-7wl">
-                    <rect key="frame" x="273" y="273" width="55" height="30"/>
+                    <rect key="frame" x="273" y="172" width="55" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="9v3-bN-Uye"/>
+                        <constraint firstAttribute="height" constant="30" id="6DL-4N-zq9"/>
+                        <constraint firstAttribute="width" constant="55" id="8JB-dE-6s8"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
                     <state key="normal" title="Sign Up">
@@ -88,9 +89,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ut-qJ-KzN">
-                    <rect key="frame" x="154" y="311" width="292" height="30"/>
+                    <rect key="frame" x="154" y="210" width="292" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="9xN-Y4-Xww"/>
+                        <constraint firstAttribute="height" constant="30" id="6vT-GJ-f9o"/>
+                        <constraint firstAttribute="width" constant="292" id="gkH-Nq-sk2"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
                     <state key="normal" title="Already have an account? Login instead.">
@@ -103,23 +105,23 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="e7m-h4-9Rr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="7pu-do-RLG"/>
-                <constraint firstItem="C70-sc-Tk2" firstAttribute="leading" secondItem="e7m-h4-9Rr" secondAttribute="trailing" constant="8" id="99s-ct-3h9"/>
-                <constraint firstAttribute="centerX" secondItem="6Ut-qJ-KzN" secondAttribute="centerX" id="Bhh-Ka-0Vi"/>
-                <constraint firstAttribute="trailing" secondItem="bNq-Oe-DsJ" secondAttribute="trailing" constant="8" id="FYE-kl-qLQ"/>
-                <constraint firstAttribute="trailing" secondItem="n9K-qD-MrN" secondAttribute="trailing" constant="8" id="KUV-0i-Yta"/>
-                <constraint firstItem="ALG-3M-7wl" firstAttribute="top" secondItem="bNq-Oe-DsJ" secondAttribute="bottom" constant="35" id="PF9-fF-hm1"/>
-                <constraint firstItem="n9K-qD-MrN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="PcU-ND-7jv"/>
-                <constraint firstItem="bNq-Oe-DsJ" firstAttribute="leading" secondItem="pj0-Ed-uIC" secondAttribute="trailing" constant="13" id="SRC-HL-4sk"/>
-                <constraint firstAttribute="centerX" secondItem="ALG-3M-7wl" secondAttribute="centerX" id="WQk-lv-zpR"/>
-                <constraint firstItem="n9K-qD-MrN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="28" id="gwI-Ur-tA9"/>
-                <constraint firstItem="bNq-Oe-DsJ" firstAttribute="top" secondItem="C70-sc-Tk2" secondAttribute="bottom" constant="22" id="jay-R2-Tau"/>
-                <constraint firstItem="pj0-Ed-uIC" firstAttribute="top" secondItem="e7m-h4-9Rr" secondAttribute="bottom" constant="31" id="kLV-oW-FOW"/>
-                <constraint firstItem="6Ut-qJ-KzN" firstAttribute="top" secondItem="ALG-3M-7wl" secondAttribute="bottom" constant="8" id="qVV-vH-5xS"/>
-                <constraint firstItem="pj0-Ed-uIC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="uSu-94-JLn"/>
-                <constraint firstItem="e7m-h4-9Rr" firstAttribute="top" secondItem="n9K-qD-MrN" secondAttribute="bottom" constant="8" id="ur1-44-mKR"/>
-                <constraint firstAttribute="trailing" secondItem="C70-sc-Tk2" secondAttribute="trailing" constant="8" id="wSX-9n-ttM"/>
-                <constraint firstItem="C70-sc-Tk2" firstAttribute="top" secondItem="n9K-qD-MrN" secondAttribute="bottom" constant="4" id="yXl-Ld-JBx"/>
+                <constraint firstItem="6Ut-qJ-KzN" firstAttribute="top" secondItem="ALG-3M-7wl" secondAttribute="bottom" constant="8" id="1hJ-oO-Za3"/>
+                <constraint firstItem="bNq-Oe-DsJ" firstAttribute="top" secondItem="C70-sc-Tk2" secondAttribute="bottom" constant="8" id="1hQ-eH-IEq"/>
+                <constraint firstItem="bNq-Oe-DsJ" firstAttribute="leading" secondItem="pj0-Ed-uIC" secondAttribute="trailing" constant="13" id="4wb-PH-dJJ"/>
+                <constraint firstAttribute="trailing" secondItem="bNq-Oe-DsJ" secondAttribute="trailing" constant="8" id="9fc-d5-zrE"/>
+                <constraint firstItem="n9K-qD-MrN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="FJU-pf-tDm"/>
+                <constraint firstItem="C70-sc-Tk2" firstAttribute="top" secondItem="n9K-qD-MrN" secondAttribute="bottom" constant="8" id="KY1-9G-Nub"/>
+                <constraint firstItem="pj0-Ed-uIC" firstAttribute="top" secondItem="e7m-h4-9Rr" secondAttribute="bottom" constant="17" id="LTi-xH-fOX"/>
+                <constraint firstItem="C70-sc-Tk2" firstAttribute="leading" secondItem="e7m-h4-9Rr" secondAttribute="trailing" constant="8" id="Mn6-zi-dmQ"/>
+                <constraint firstItem="e7m-h4-9Rr" firstAttribute="top" secondItem="n9K-qD-MrN" secondAttribute="bottom" constant="12" id="S4D-CS-fp5"/>
+                <constraint firstAttribute="trailing" secondItem="n9K-qD-MrN" secondAttribute="trailing" constant="8" id="Sl5-cM-cbU"/>
+                <constraint firstItem="pj0-Ed-uIC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Tl0-Ea-Bir"/>
+                <constraint firstAttribute="centerX" secondItem="6Ut-qJ-KzN" secondAttribute="centerX" id="ebN-Rw-FbI"/>
+                <constraint firstItem="ALG-3M-7wl" firstAttribute="top" secondItem="bNq-Oe-DsJ" secondAttribute="bottom" constant="8" id="i6e-5x-Onh"/>
+                <constraint firstAttribute="trailing" secondItem="C70-sc-Tk2" secondAttribute="trailing" constant="8" id="rNM-Hh-Iky"/>
+                <constraint firstItem="e7m-h4-9Rr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="tvv-V8-5IF"/>
+                <constraint firstAttribute="centerX" secondItem="ALG-3M-7wl" secondAttribute="centerX" id="xfh-w8-y05"/>
+                <constraint firstItem="n9K-qD-MrN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="yjF-wU-P3M"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
         </view>
