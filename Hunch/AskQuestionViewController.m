@@ -13,7 +13,10 @@
 #import <Parse/Parse.h>
 #import "CocoaLumberjack.h"
 
-#define VIEW_TAG_QUESTION   201
+#define VIEW_TAG_QUESTION           201
+#define SCREEN_HEIGHT               [UIScreen mainScreen].bounds.size.height
+#define VIEW_OFFSET_FOR_KEYBOARD    -100.0f
+#define IPHONE_4_SCREEN_HEIGHT      480.f
 
 @interface AskQuestionViewController ()
 
@@ -34,7 +37,7 @@ typedef enum {
 
 @end
 
-static const DDLogLevel ddLogLevel = DDLogLevelError;
+static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 @implementation AskQuestionViewController
 
@@ -62,6 +65,16 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
     }
 }
 
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    if([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        [self.answer1Field becomeFirstResponder];
+        return NO;
+    }
+    
+    return YES;
+}
+
 - (void)textViewDidChange:(UITextView *)textView {
     if (textView.tag == VIEW_TAG_QUESTION && textView.text.length > MAXIMUM_QUESTION_LENGTH) {
         textView.text = [textView.text substringToIndex:MAXIMUM_QUESTION_LENGTH];
@@ -69,9 +82,31 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
     [self updateDisplay:nil];
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    [self repositionViewForKeyboard:YES];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField transferFirstResponderToNextControl];
+    if (textField.nextControl) {
+        [textField transferFirstResponderToNextControl];
+    } else {
+        [self repositionViewForKeyboard:NO];
+        [self.questionTextView becomeFirstResponder];
+    }
     return NO;
+}
+
+- (void)repositionViewForKeyboard:(BOOL)isRaised {
+    if (SCREEN_HEIGHT > IPHONE_4_SCREEN_HEIGHT) return;
+    if (isRaised) {
+        [UIView animateWithDuration:0.25f animations:^{
+            self.view.frame = CGRectOffset(self.view.bounds, 0.0f, VIEW_OFFSET_FOR_KEYBOARD);
+        } completion:^(BOOL finished) {}];
+    } else {
+        [UIView animateWithDuration:0.25f animations:^{
+            self.view.frame = CGRectOffset(self.view.bounds, 0.0f, 0.0f);
+        } completion:^(BOOL finished) {}];
+    }
 }
 
 - (IBAction)toggleType:(id)sender {
@@ -79,6 +114,9 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
         self.answer1Field.text = EMPTY_STRING;
         self.answer2Field.text = EMPTY_STRING;
         self.answer3Field.text = EMPTY_STRING;
+    } else {
+        [self repositionViewForKeyboard:NO];
+        [self.questionTextView becomeFirstResponder];
     }
     [self updateDisplay:sender];
 }
@@ -97,6 +135,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
         self.answer2Field.text = ANSWER_NO;
         self.answer3Field.text = EMPTY_STRING;
     }
+    
     self.questionCharacterCountLabel.text = [NSString stringWithFormat:@"%lu / %i", (unsigned long)self.questionTextView.text.length, MAXIMUM_QUESTION_LENGTH];
     self.answer3Field.hidden = self.answer3Label.hidden = ([self questionType] == QuestionTypeYesNo);
     self.answer1Field.enabled = self.answer2Field.enabled = self.answer3Field.enabled = ([self questionType] == QuestionTypeCustom);
