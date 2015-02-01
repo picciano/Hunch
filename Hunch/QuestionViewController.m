@@ -102,6 +102,10 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     
     PFObject *answer = self.currentAnswers[((UIView *)sender).tag - VIEW_TAG_ANSWER_BUTTON_BASE];
     [self saveResponse:answer];
+    
+    self.currentQuestion = nil;
+    self.currentAnswers = nil;
+    [self updateDisplay:nil];
 }
 
 - (IBAction)reportQuestion:(id)sender {
@@ -127,10 +131,6 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 }
 
 - (void)loadEligibleQuestion {
-    self.currentQuestion = nil;
-    self.currentAnswers = nil;
-    [self updateDisplay:nil];
-    
     PFQuery *myResponsesQuery = [PFQuery queryWithClassName:OBJECT_TYPE_RESPONSE];
     [myResponsesQuery whereKey:OBJECT_KEY_USER equalTo:[PFUser currentUser]];
     
