@@ -109,4 +109,12 @@
     return self.contentView.layer.cornerRadius;
 }
 
+- (void)setBlocksActivity:(BOOL)blocksActivity {
+    self.view.userInteractionEnabled = blocksActivity;
+}
+
+- (BOOL)blocksActivity {
+    return self.view.userInteractionEnabled;
+}
+
 @end

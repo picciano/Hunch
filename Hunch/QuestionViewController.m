@@ -17,6 +17,7 @@
 
 #define VIEW_TAG_ANSWER_BUTTON_BASE 100
 #define RETRY_DELAY                 8
+#define OVERLAY_MESSAGE_DELAY       0.5
 
 @interface QuestionViewController ()
 
@@ -42,6 +43,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     self.adBanner.alpha = 0.0;
     
     self.messageOverlay = [[MessageOverlayViewController alloc] initWithNibName:nil bundle:nil];
+    self.messageOverlay.blocksActivity = NO;
     [self.view insertSubview:self.messageOverlay.view belowSubview:self.adBanner];
     
     if (![PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
@@ -140,7 +142,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 - (void)loadEligibleQuestion {
     self.messageOverlay.message = @"Loading...";
-    [self.messageOverlay showAfterDelay:0.25f];
+    [self.messageOverlay showAfterDelay:OVERLAY_MESSAGE_DELAY];
     
     PFQuery *myResponsesQuery = [PFQuery queryWithClassName:OBJECT_TYPE_RESPONSE];
     [myResponsesQuery whereKey:OBJECT_KEY_USER equalTo:[PFUser currentUser]];
@@ -177,7 +179,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 - (void)saveResponse:(PFObject *)answer {
     self.messageOverlay.message = @"Saving Response...";
-    [self.messageOverlay showAfterDelay:0.25f];
+    [self.messageOverlay showAfterDelay:OVERLAY_MESSAGE_DELAY];
     
     PFObject *response = [PFObject objectWithClassName:OBJECT_TYPE_RESPONSE];
     response[OBJECT_KEY_QUESTION] = self.currentQuestion;

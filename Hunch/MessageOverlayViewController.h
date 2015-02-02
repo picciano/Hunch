@@ -18,6 +18,7 @@
 @property (strong, nonatomic) UIColor *contentBackgroundColor;
 @property (strong, nonatomic) UIColor *messageLabelTextColor;
 @property (nonatomic) CGFloat contentCornerRadius;
+@property (nonatomic) BOOL blocksActivity;
 
 - (void)show;
 - (void)showAfterDelay:(NSTimeInterval)delay;
