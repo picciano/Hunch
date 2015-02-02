@@ -32,6 +32,8 @@
 		AF3E5A191A7694B4002574A1 /* UIControl+NextControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3E5A181A7694B4002574A1 /* UIControl+NextControl.m */; };
 		AF3E5A1E1A76F3EF002574A1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3E5A1C1A76F3EF002574A1 /* ProfileViewController.m */; };
 		AF3E5A1F1A76F3EF002574A1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3E5A1D1A76F3EF002574A1 /* ProfileViewController.xib */; };
+		AF7F66321A800639008B996D /* MessageOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F66301A800639008B996D /* MessageOverlayViewController.m */; };
+		AF7F66331A800639008B996D /* MessageOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7F66311A800639008B996D /* MessageOverlayViewController.xib */; };
 		AFBAC3CA1A799F0E001BECCA /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBAC3C91A799F0E001BECCA /* iAd.framework */; };
 		AFE4D1081A78156F00C5377A /* StyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4D1071A78156F00C5377A /* StyleKit.m */; };
 		AFE4D10E1A781D0500C5377A /* AnswerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4D10D1A781D0500C5377A /* AnswerButton.m */; };
@@ -98,6 +100,9 @@
 		AF3E5A1B1A76F3EF002574A1 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		AF3E5A1C1A76F3EF002574A1 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		AF3E5A1D1A76F3EF002574A1 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		AF7F662F1A800639008B996D /* MessageOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageOverlayViewController.h; sourceTree = "<group>"; };
+		AF7F66301A800639008B996D /* MessageOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageOverlayViewController.m; sourceTree = "<group>"; };
+		AF7F66311A800639008B996D /* MessageOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageOverlayViewController.xib; sourceTree = "<group>"; };
 		AFBAC3C91A799F0E001BECCA /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		AFE4D1061A78156F00C5377A /* StyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleKit.h; sourceTree = "<group>"; };
 		AFE4D1071A78156F00C5377A /* StyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleKit.m; sourceTree = "<group>"; };
@@ -197,6 +202,7 @@
 				AF3E5A1A1A76F3CF002574A1 /* Profile View */,
 				AFF9D8181A7964F200756B02 /* Question Result View */,
 				AFF84A431A705EB4003DA995 /* Sign Up View */,
+				AF7F662E1A800610008B996D /* Mesage Overlay */,
 				AFF9D81E1A79708500756B02 /* honcheng/iOSPlot */,
 				AFE4D1051A7807D300C5377A /* Style Kit */,
 				AFE4D1041A7807BA00C5377A /* Extensions */,
@@ -290,6 +296,16 @@
 				AFF9D8121A793FF300756B02 /* AchievementTableViewCell.xib */,
 			);
 			name = "Profile View";
+			sourceTree = "<group>";
+		};
+		AF7F662E1A800610008B996D /* Mesage Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				AF7F662F1A800639008B996D /* MessageOverlayViewController.h */,
+				AF7F66301A800639008B996D /* MessageOverlayViewController.m */,
+				AF7F66311A800639008B996D /* MessageOverlayViewController.xib */,
+			);
+			name = "Mesage Overlay";
 			sourceTree = "<group>";
 		};
 		AFE4D1041A7807BA00C5377A /* Extensions */ = {
@@ -447,6 +463,7 @@
 				AFF9D8141A793FF300756B02 /* AchievementTableViewCell.xib in Resources */,
 				AFF84A481A705EEA003DA995 /* SignUpViewController.xib in Resources */,
 				AF1E70C01A70585900FE05CD /* AskQuestionViewController.xib in Resources */,
+				AF7F66331A800639008B996D /* MessageOverlayViewController.xib in Resources */,
 				AF1E70831A704C0D00FE05CD /* LaunchScreen.xib in Resources */,
 				AFF9D81D1A79651E00756B02 /* QuestionResultViewController.xib in Resources */,
 				AF1E70801A704C0D00FE05CD /* Images.xcassets in Resources */,
@@ -496,6 +513,7 @@
 				AFF84A471A705EEA003DA995 /* SignUpViewController.m in Sources */,
 				AFF9D8211A7970AF00756B02 /* PCPieChart.m in Sources */,
 				AFF9D8171A794A4C00756B02 /* PFObject+DateFormat.m in Sources */,
+				AF7F66321A800639008B996D /* MessageOverlayViewController.m in Sources */,
 				AF3E5A191A7694B4002574A1 /* UIControl+NextControl.m in Sources */,
 				AF1E70781A704C0D00FE05CD /* AppDelegate.m in Sources */,
 				AF1E70751A704C0D00FE05CD /* main.m in Sources */,

@@ -10,11 +10,13 @@
 #import "AskQuestionViewController.h"
 #import "ProfileViewController.h"
 #import "AnswerButton.h"
+#import "MessageOverlayViewController.h"
 #import "Constants.h"
 #import <Parse/Parse.h>
 #import "CocoaLumberjack.h"
 
 #define VIEW_TAG_ANSWER_BUTTON_BASE 100
+#define RETRY_DELAY                 8
 
 @interface QuestionViewController ()
 
@@ -26,6 +28,8 @@
 @property (strong, nonatomic) NSArray *currentAnswers;
 @property (nonatomic) BOOL suppressNoMoreQuestionsWarning;
 
+@property (strong, nonatomic) MessageOverlayViewController *messageOverlay;
+
 @end
 
 static const DDLogLevel ddLogLevel = DDLogLevelDebug;
@@ -36,6 +40,9 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     [super viewDidLoad];
     
     self.adBanner.alpha = 0.0;
+    
+    self.messageOverlay = [[MessageOverlayViewController alloc] initWithNibName:nil bundle:nil];
+    [self.view insertSubview:self.messageOverlay.view belowSubview:self.adBanner];
     
     if (![PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
         [self loadEligibleQuestion];
@@ -69,6 +76,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
         } else {
             DDLogDebug(@"Answers are loaded.");
             self.currentAnswers = objects;
+            [self.messageOverlay hide];
             [self updateDisplay:nil];
         }
     }];
@@ -131,6 +139,9 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 }
 
 - (void)loadEligibleQuestion {
+    self.messageOverlay.message = @"Loading...";
+    [self.messageOverlay showAfterDelay:0.25f];
+    
     PFQuery *myResponsesQuery = [PFQuery queryWithClassName:OBJECT_TYPE_RESPONSE];
     [myResponsesQuery whereKey:OBJECT_KEY_USER equalTo:[PFUser currentUser]];
     
@@ -140,8 +151,9 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     
     [questionsQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         if (error) {
+            self.messageOverlay.message = @"Waiting for a question.";
             if (self.suppressNoMoreQuestionsWarning) {
-                [self performSelector:@selector(loadEligibleQuestion) withObject:nil afterDelay:5];
+                [self performSelector:@selector(loadEligibleQuestion) withObject:nil afterDelay:RETRY_DELAY];
             } else {
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No more questions"
                                                                                message:@"You have answered all the questions. We will keep checking and to see if any more questions get added."
@@ -150,7 +162,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
                                                                         style:UIAlertActionStyleDefault
                                                                       handler:^(UIAlertAction * action) {
                                                                           self.suppressNoMoreQuestionsWarning = YES;
-                                                                          [self performSelector:@selector(loadEligibleQuestion) withObject:nil afterDelay:5];
+                                                                          [self performSelector:@selector(loadEligibleQuestion) withObject:nil afterDelay:RETRY_DELAY];
                                                                       }];
                 [alert addAction:defaultAction];
                 [self presentViewController:alert animated:YES completion:nil];
@@ -164,6 +176,9 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 }
 
 - (void)saveResponse:(PFObject *)answer {
+    self.messageOverlay.message = @"Saving Response...";
+    [self.messageOverlay showAfterDelay:0.25f];
+    
     PFObject *response = [PFObject objectWithClassName:OBJECT_TYPE_RESPONSE];
     response[OBJECT_KEY_QUESTION] = self.currentQuestion;
     response[OBJECT_KEY_USER] = [PFUser currentUser];
