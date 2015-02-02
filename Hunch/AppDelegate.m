@@ -76,6 +76,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // Store the deviceToken in the current Installation and save it to Parse.
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setObject:[PFUser currentUser] forKey:@"user"];
     [currentInstallation setDeviceTokenFromData:deviceToken];
     [currentInstallation saveInBackground];
 }
