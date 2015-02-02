@@ -33,7 +33,7 @@
 
 @end
 
-static const DDLogLevel ddLogLevel = DDLogLevelDebug;
+static const DDLogLevel ddLogLevel = DDLogLevelError;
 
 @implementation QuestionViewController
 
@@ -42,13 +42,14 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     
     self.messageOverlay = [[MessageOverlayViewController alloc] initWithNibName:nil bundle:nil];
     self.messageOverlay.blocksActivity = NO;
+    self.messageOverlay.backgroundColor = [UIColor clearColor];
     [self.view insertSubview:self.messageOverlay.view belowSubview:self.adBanner];
     
     if (![PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
         [self loadEligibleQuestion];
     }
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadEligibleQuestion) name:CURRENT_USER_CHANGE_NOTIFICATION object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(currentUserDidChange) name:CURRENT_USER_CHANGE_NOTIFICATION object:nil];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -82,7 +83,14 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     }];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
+    if (animated) { // YES if coming back from another screen, NO if initial launch
+        [self loadEligibleQuestion];
+    }
     [self updateDisplay:nil];
 }
 
@@ -136,6 +144,17 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
         [self presentViewController:alert animated:YES completion:nil];
         [self loadEligibleQuestion];
     }];
+}
+
+- (void)currentUserDidChange {
+    self.currentQuestion = nil;
+    self.currentAnswers = nil;
+    [self updateDisplay:nil];
+    
+    if ([self.navigationController visibleViewController] == self) {
+        [NSObject cancelPreviousPerformRequestsWithTarget:self];
+        [self loadEligibleQuestion];
+    }
 }
 
 - (void)loadEligibleQuestion {
