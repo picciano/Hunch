@@ -46,6 +46,20 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
             [[NSNotificationCenter defaultCenter] postNotificationName:CURRENT_USER_CHANGE_NOTIFICATION object:self];
         }];
     }
+    
+    UIApplication *application = [UIApplication sharedApplication];
+    if (application.applicationState != UIApplicationStateBackground) {
+        // Track an app open here if we launch with a push, unless
+        // "content_available" was used to trigger a background push (introduced
+        // in iOS 7). In that case, we skip tracking here to avoid double
+        // counting the app-open.
+        BOOL preBackgroundPush = ![application respondsToSelector:@selector(backgroundRefreshStatus)];
+        BOOL oldPushHandlerOnly = ![self respondsToSelector:@selector(application:didReceiveRemoteNotification:fetchCompletionHandler:)];
+        BOOL noPushPayload = ![launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+        if (preBackgroundPush || oldPushHandlerOnly || noPushPayload) {
+            [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+        }
+    }
 }
 
 - (void)initializeUserInterfaceWithOptions:(NSDictionary *)launchOptions {
@@ -64,6 +78,27 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation setDeviceTokenFromData:deviceToken];
     [currentInstallation saveInBackground];
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    if (currentInstallation.badge != 0) {
+        currentInstallation.badge = 0;
+        [currentInstallation saveEventually];
+    }
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFAnalytics trackAppOpenedWithRemoteNotificationPayload:userInfo];
+    NSString *message = userInfo[@"aps"][@"alert"];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Remote Notification"
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Okay"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:nil];
+    [alert addAction:defaultAction];
+    [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
 }
 
 @end
