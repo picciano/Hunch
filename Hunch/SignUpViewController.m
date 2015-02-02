@@ -64,6 +64,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
         } else {
             DDLogInfo(@"Signup completed.");
             [self dismissViewControllerAnimated:YES completion:^{
+                [self initializePushNotifications];
                 [[NSNotificationCenter defaultCenter] postNotificationName:CURRENT_USER_CHANGE_NOTIFICATION object:self];
             }];
         }
@@ -85,10 +86,24 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
         } else {
             DDLogInfo(@"Login completed.");
             [self dismissViewControllerAnimated:YES completion:^{
+                [self initializePushNotifications];
                 [[NSNotificationCenter defaultCenter] postNotificationName:CURRENT_USER_CHANGE_NOTIFICATION object:self];
             }];
         }
     }];
+}
+
+
+
+- (void)initializePushNotifications {
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    UIApplication *application = [UIApplication sharedApplication];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
 }
 
 - (BOOL)prefersStatusBarHidden {
