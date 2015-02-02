@@ -40,8 +40,6 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.adBanner.alpha = 0.0;
-    
     self.messageOverlay = [[MessageOverlayViewController alloc] initWithNibName:nil bundle:nil];
     self.messageOverlay.blocksActivity = NO;
     [self.view insertSubview:self.messageOverlay.view belowSubview:self.adBanner];

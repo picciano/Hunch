@@ -54,7 +54,7 @@
                         <action selector="askAQuestion:" destination="-1" eventType="touchUpInside" id="Eni-Lh-PQQ"/>
                     </connections>
                 </button>
-                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="QuA-br-Aoj">
+                <adBannerView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="QuA-br-Aoj">
                     <rect key="frame" x="0.0" y="430" width="320" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="OU3-k7-lab"/>
