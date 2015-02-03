@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import "SignUpViewController.h"
+#import "CreditsViewController.h"
 #import "QuestionTableViewCell.h"
 #import "AchievementTableViewCell.h"
 #import "QuestionResultViewController.h"
@@ -70,6 +71,11 @@ static NSString *kQuestionReuseIdentifier = @"kQuestionReuseIdentifier";
 
 - (IBAction)signUp:(id)sender {
     UIViewController *viewController = [[SignUpViewController alloc] initWithNibName:nil bundle:nil];
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+- (IBAction)showCredit:(id)sender {
+    UIViewController *viewController = [[CreditsViewController alloc] initWithNibName:nil bundle:nil];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 

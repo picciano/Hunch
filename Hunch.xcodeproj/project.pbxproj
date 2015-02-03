@@ -36,6 +36,8 @@
 		AF7F66331A800639008B996D /* MessageOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7F66311A800639008B996D /* MessageOverlayViewController.xib */; };
 		AF8B660B1A812B5000CC057B /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF8B660A1A812B5000CC057B /* HeaderView.xib */; };
 		AF8B660E1A812BB800CC057B /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8B660D1A812BB800CC057B /* HeaderView.m */; };
+		AFAE90631A816D0000F850BB /* CreditsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAE90611A816D0000F850BB /* CreditsViewController.m */; };
+		AFAE90641A816D0000F850BB /* CreditsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAE90621A816D0000F850BB /* CreditsViewController.xib */; };
 		AFBAC3CA1A799F0E001BECCA /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBAC3C91A799F0E001BECCA /* iAd.framework */; };
 		AFE4D1081A78156F00C5377A /* StyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4D1071A78156F00C5377A /* StyleKit.m */; };
 		AFE4D10E1A781D0500C5377A /* AnswerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4D10D1A781D0500C5377A /* AnswerButton.m */; };
@@ -111,6 +113,9 @@
 		AF8B660A1A812B5000CC057B /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		AF8B660C1A812BB800CC057B /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		AF8B660D1A812BB800CC057B /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		AFAE90601A816D0000F850BB /* CreditsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditsViewController.h; sourceTree = "<group>"; };
+		AFAE90611A816D0000F850BB /* CreditsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsViewController.m; sourceTree = "<group>"; };
+		AFAE90621A816D0000F850BB /* CreditsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditsViewController.xib; sourceTree = "<group>"; };
 		AFBAC3C91A799F0E001BECCA /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		AFE4D1061A78156F00C5377A /* StyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleKit.h; sourceTree = "<group>"; };
 		AFE4D1071A78156F00C5377A /* StyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleKit.m; sourceTree = "<group>"; };
@@ -220,6 +225,7 @@
 				AFE4D1041A7807BA00C5377A /* Extensions */,
 				AF1E70721A704C0D00FE05CD /* Supporting Files */,
 				AFF50C561A80419C00AD150D /* Acheivements */,
+				AFAE905F1A816CE600F850BB /* Credits */,
 				AFF50C511A803C3200AD150D /* Sounds */,
 				AFF84A491A706076003DA995 /* Cocoa Lumberjack */,
 				AF1E709F1A7053B800FE05CD /* Frameworks */,
@@ -323,6 +329,16 @@
 				AF7F66311A800639008B996D /* MessageOverlayViewController.xib */,
 			);
 			name = "Mesage Overlay";
+			sourceTree = "<group>";
+		};
+		AFAE905F1A816CE600F850BB /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				AFAE90601A816D0000F850BB /* CreditsViewController.h */,
+				AFAE90611A816D0000F850BB /* CreditsViewController.m */,
+				AFAE90621A816D0000F850BB /* CreditsViewController.xib */,
+			);
+			name = Credits;
 			sourceTree = "<group>";
 		};
 		AFE4D1041A7807BA00C5377A /* Extensions */ = {
@@ -497,6 +513,7 @@
 				AF8B660B1A812B5000CC057B /* HeaderView.xib in Resources */,
 				AFF50C531A803D6400AD150D /* hmmm.aiff in Resources */,
 				AF3E5A1F1A76F3EF002574A1 /* ProfileViewController.xib in Resources */,
+				AFAE90641A816D0000F850BB /* CreditsViewController.xib in Resources */,
 				AFF9D8141A793FF300756B02 /* AchievementTableViewCell.xib in Resources */,
 				AFF84A481A705EEA003DA995 /* SignUpViewController.xib in Resources */,
 				AF1E70C01A70585900FE05CD /* AskQuestionViewController.xib in Resources */,
@@ -557,6 +574,7 @@
 				AF1E70781A704C0D00FE05CD /* AppDelegate.m in Sources */,
 				AF1E70751A704C0D00FE05CD /* main.m in Sources */,
 				AF1E709D1A70500D00FE05CD /* QuestionViewController.m in Sources */,
+				AFAE90631A816D0000F850BB /* CreditsViewController.m in Sources */,
 				AF3E5A1E1A76F3EF002574A1 /* ProfileViewController.m in Sources */,
 				AFF50C591A8041CA00AD150D /* Achievements.m in Sources */,
 				AFE4D10E1A781D0500C5377A /* AnswerButton.m in Sources */,

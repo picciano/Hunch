@@ -124,6 +124,20 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vrk-eJ-mRU">
+                    <rect key="frame" x="505" y="122" width="87" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="87" id="FV8-9B-Vt8"/>
+                        <constraint firstAttribute="height" constant="28" id="rsP-qm-bvw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                    <state key="normal" title="Image Credits">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="showCredit:" destination="-1" eventType="touchUpInside" id="fVB-0i-eOy"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -157,6 +171,8 @@
                 <constraint firstItem="AEd-p8-Xdk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mq5-1J-mh8"/>
                 <constraint firstItem="OWu-BS-Za5" firstAttribute="top" secondItem="6KS-vd-vrF" secondAttribute="bottom" constant="8" id="rr9-VL-uib"/>
                 <constraint firstAttribute="trailing" secondItem="gGe-4N-q06" secondAttribute="trailing" constant="8" id="xEo-FL-NJH"/>
+                <constraint firstItem="Vrk-eJ-mRU" firstAttribute="top" secondItem="OWu-BS-Za5" secondAttribute="bottom" constant="10" id="yLo-ur-VRX"/>
+                <constraint firstAttribute="trailing" secondItem="Vrk-eJ-mRU" secondAttribute="trailing" constant="8" id="zDd-Je-iS2"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
         </view>
