@@ -166,7 +166,19 @@ static NSString *kQuestionReuseIdentifier = @"kQuestionReuseIdentifier";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 30;
+    switch (section) {
+        case 0:
+            return self.questions.count>0?30:0;
+            break;
+            
+        case 1:
+            return self.achievements.count>0?30:0;
+            break;
+            
+        default:
+            return 0;
+            break;
+    }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
