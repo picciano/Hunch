@@ -167,6 +167,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
     
     PFQuery *questionsQuery = [PFQuery queryWithClassName:OBJECT_TYPE_QUESTION];
     [questionsQuery whereKey:OBJECT_KEY_USER notEqualTo:[PFUser currentUser]];
+    [questionsQuery orderByDescending:OBJECT_KEY_CREATED_AT];
     [questionsQuery whereKey:OBJECT_KEY_ID doesNotMatchKey:OBJECT_KEY_QUESTION_ID inQuery:myResponsesQuery];
     
     [questionsQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
