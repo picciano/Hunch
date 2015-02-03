@@ -16,6 +16,9 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ZwS-mY-NGr">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Zo-HG-ZlK">
                     <rect key="frame" x="555" y="8" width="37" height="30"/>
                     <constraints>
@@ -46,11 +49,15 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="ZwS-mY-NGr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1IU-iz-ot1"/>
+                <constraint firstItem="ZwS-mY-NGr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BHv-6K-rGw"/>
                 <constraint firstItem="V3p-hm-nzP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="LOX-e8-xlJ"/>
                 <constraint firstItem="cFy-H4-hh5" firstAttribute="top" secondItem="5Zo-HG-ZlK" secondAttribute="bottom" constant="154" id="RpW-9l-RnB"/>
                 <constraint firstAttribute="trailing" secondItem="V3p-hm-nzP" secondAttribute="trailing" constant="8" id="VIx-3E-TPh"/>
                 <constraint firstItem="cFy-H4-hh5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="VWi-PK-scr"/>
+                <constraint firstAttribute="bottom" secondItem="ZwS-mY-NGr" secondAttribute="bottom" id="ZFW-ZF-lfA"/>
                 <constraint firstAttribute="bottom" secondItem="cFy-H4-hh5" secondAttribute="bottom" constant="8" id="Zl7-wi-EBH"/>
+                <constraint firstAttribute="trailing" secondItem="ZwS-mY-NGr" secondAttribute="trailing" id="fmN-Vw-EOC"/>
                 <constraint firstAttribute="trailing" secondItem="cFy-H4-hh5" secondAttribute="trailing" constant="8" id="ghk-8k-xVW"/>
                 <constraint firstItem="V3p-hm-nzP" firstAttribute="top" secondItem="5Zo-HG-ZlK" secondAttribute="bottom" constant="30" id="hjl-H4-zVx"/>
                 <constraint firstItem="5Zo-HG-ZlK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="muW-p9-UfK"/>
@@ -59,4 +66,7 @@
             <nil key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background" width="320" height="480"/>
+    </resources>
 </document>

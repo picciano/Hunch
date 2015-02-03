@@ -38,6 +38,7 @@
                     <constraint firstItem="wOU-DZ-jNJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-7" id="xsx-0E-H2e"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="questionCreatedAtLabel" destination="FgF-q9-haX" id="h6G-TN-JsL"/>
                 <outlet property="questionTextLabel" destination="wOU-DZ-jNJ" id="RFV-1g-tsN"/>

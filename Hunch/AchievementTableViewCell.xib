@@ -54,6 +54,7 @@
                     <constraint firstItem="OZg-S6-k1E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-6" id="zCR-XA-hyG"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="achievementCreatedAtLabel" destination="MUT-Uu-wuF" id="YUD-wS-Zbx"/>
                 <outlet property="achievementDescriptionLabel" destination="Bz2-tO-vEq" id="5Es-Vs-a4y"/>

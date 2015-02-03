@@ -18,6 +18,9 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="yaD-6I-X2b">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9K-qD-MrN">
                     <rect key="frame" x="8" y="8" width="584" height="80"/>
                     <constraints>
@@ -107,8 +110,10 @@
             <constraints>
                 <constraint firstItem="6Ut-qJ-KzN" firstAttribute="top" secondItem="ALG-3M-7wl" secondAttribute="bottom" constant="8" id="1hJ-oO-Za3"/>
                 <constraint firstItem="bNq-Oe-DsJ" firstAttribute="top" secondItem="C70-sc-Tk2" secondAttribute="bottom" constant="8" id="1hQ-eH-IEq"/>
+                <constraint firstAttribute="trailing" secondItem="yaD-6I-X2b" secondAttribute="trailing" id="1ws-v8-miu"/>
                 <constraint firstItem="bNq-Oe-DsJ" firstAttribute="leading" secondItem="pj0-Ed-uIC" secondAttribute="trailing" constant="13" id="4wb-PH-dJJ"/>
                 <constraint firstAttribute="trailing" secondItem="bNq-Oe-DsJ" secondAttribute="trailing" constant="8" id="9fc-d5-zrE"/>
+                <constraint firstItem="yaD-6I-X2b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DBu-k2-ZVY"/>
                 <constraint firstItem="n9K-qD-MrN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="FJU-pf-tDm"/>
                 <constraint firstItem="C70-sc-Tk2" firstAttribute="top" secondItem="n9K-qD-MrN" secondAttribute="bottom" constant="8" id="KY1-9G-Nub"/>
                 <constraint firstItem="pj0-Ed-uIC" firstAttribute="top" secondItem="e7m-h4-9Rr" secondAttribute="bottom" constant="17" id="LTi-xH-fOX"/>
@@ -116,14 +121,19 @@
                 <constraint firstItem="e7m-h4-9Rr" firstAttribute="top" secondItem="n9K-qD-MrN" secondAttribute="bottom" constant="12" id="S4D-CS-fp5"/>
                 <constraint firstAttribute="trailing" secondItem="n9K-qD-MrN" secondAttribute="trailing" constant="8" id="Sl5-cM-cbU"/>
                 <constraint firstItem="pj0-Ed-uIC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Tl0-Ea-Bir"/>
+                <constraint firstAttribute="bottom" secondItem="yaD-6I-X2b" secondAttribute="bottom" id="duU-UD-Gn8"/>
                 <constraint firstAttribute="centerX" secondItem="6Ut-qJ-KzN" secondAttribute="centerX" id="ebN-Rw-FbI"/>
                 <constraint firstItem="ALG-3M-7wl" firstAttribute="top" secondItem="bNq-Oe-DsJ" secondAttribute="bottom" constant="8" id="i6e-5x-Onh"/>
                 <constraint firstAttribute="trailing" secondItem="C70-sc-Tk2" secondAttribute="trailing" constant="8" id="rNM-Hh-Iky"/>
                 <constraint firstItem="e7m-h4-9Rr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="tvv-V8-5IF"/>
+                <constraint firstItem="yaD-6I-X2b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wRG-v5-1sI"/>
                 <constraint firstAttribute="centerX" secondItem="ALG-3M-7wl" secondAttribute="centerX" id="xfh-w8-y05"/>
                 <constraint firstItem="n9K-qD-MrN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="yjF-wU-P3M"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background" width="320" height="480"/>
+    </resources>
 </document>

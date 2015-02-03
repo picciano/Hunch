@@ -20,6 +20,9 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="AEd-p8-Xdk">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KS-vd-vrF">
                     <rect key="frame" x="154" y="64" width="438" height="20"/>
                     <constraints>
@@ -93,7 +96,7 @@
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Z7E-UU-NZg">
                     <rect key="frame" x="8" y="158" width="584" height="434"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="rqI-9j-Gfe"/>
                         <outlet property="delegate" destination="-1" id="Dxh-v4-usW"/>
@@ -124,14 +127,17 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="AEd-p8-Xdk" secondAttribute="trailing" id="17z-h6-A2J"/>
                 <constraint firstItem="6KS-vd-vrF" firstAttribute="top" secondItem="gGe-4N-q06" secondAttribute="bottom" constant="8" id="1K2-dQ-M40"/>
                 <constraint firstItem="Z7E-UU-NZg" firstAttribute="top" secondItem="S9U-3l-eGX" secondAttribute="bottom" constant="8" id="3g8-Zs-PDK"/>
                 <constraint firstItem="RT0-Jc-lu7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="3xC-tX-SjC"/>
+                <constraint firstAttribute="bottom" secondItem="AEd-p8-Xdk" secondAttribute="bottom" id="4UE-4Q-IvV"/>
                 <constraint firstItem="RT0-Jc-lu7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="4yU-bP-dp0"/>
                 <constraint firstAttribute="trailing" secondItem="Z7E-UU-NZg" secondAttribute="trailing" constant="8" id="5kc-PB-ACQ"/>
                 <constraint firstItem="OWu-BS-Za5" firstAttribute="leading" secondItem="4kZ-tV-CQm" secondAttribute="trailing" constant="8" id="77C-xr-KwY"/>
                 <constraint firstAttribute="trailing" secondItem="uM7-qT-eKH" secondAttribute="trailing" constant="8" id="ALT-ox-3Mi"/>
                 <constraint firstItem="uM7-qT-eKH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="4" id="D8a-cE-3Lw"/>
+                <constraint firstItem="AEd-p8-Xdk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="F92-CN-DFf"/>
                 <constraint firstAttribute="centerX" secondItem="S9U-3l-eGX" secondAttribute="centerX" id="HI5-Hp-awz"/>
                 <constraint firstItem="llQ-kV-kKV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="KKp-cq-bta"/>
                 <constraint firstItem="Z7E-UU-NZg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="OMe-Yy-k0I"/>
@@ -148,10 +154,14 @@
                 <constraint firstItem="6KS-vd-vrF" firstAttribute="leading" secondItem="llQ-kV-kKV" secondAttribute="trailing" constant="11" id="lco-8W-63y"/>
                 <constraint firstItem="S9U-3l-eGX" firstAttribute="top" secondItem="OWu-BS-Za5" secondAttribute="bottom" constant="8" id="lvn-XL-8In"/>
                 <constraint firstItem="uM7-qT-eKH" firstAttribute="leading" secondItem="RT0-Jc-lu7" secondAttribute="trailing" constant="8" id="mCY-BX-ANY"/>
+                <constraint firstItem="AEd-p8-Xdk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mq5-1J-mh8"/>
                 <constraint firstItem="OWu-BS-Za5" firstAttribute="top" secondItem="6KS-vd-vrF" secondAttribute="bottom" constant="8" id="rr9-VL-uib"/>
                 <constraint firstAttribute="trailing" secondItem="gGe-4N-q06" secondAttribute="trailing" constant="8" id="xEo-FL-NJH"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background" width="320" height="480"/>
+    </resources>
 </document>
