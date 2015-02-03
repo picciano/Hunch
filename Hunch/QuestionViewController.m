@@ -125,12 +125,34 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
 - (IBAction)touchAnswer:(id)sender {
     DDLogDebug(@"touchAnswer: called");
     
-    PFObject *answer = self.currentAnswers[((UIView *)sender).tag - VIEW_TAG_ANSWER_BUTTON_BASE];
+    NSInteger tag = ((UIView *)sender).tag;
+    PFObject *answer = self.currentAnswers[tag - VIEW_TAG_ANSWER_BUTTON_BASE];
     [self saveResponse:answer];
     
-    self.currentQuestion = nil;
-    self.currentAnswers = nil;
-    [self updateDisplay:nil];
+    [self animateFallingAnswersExceptTag:tag];
+}
+
+- (void)animateFallingAnswersExceptTag:(NSInteger)tag {
+    for (NSInteger i = VIEW_TAG_ANSWER_BUTTON_BASE; i < VIEW_TAG_ANSWER_BUTTON_BASE + 3; i++) {
+        if (i != tag) {
+            UIView *view = [self.view viewWithTag:i];
+            [UIView animateWithDuration:0.25 animations:^{
+                view.layer.transform = CATransform3DMakeTranslation(500.0, 0.0, 0.0);
+            } completion:^(BOOL finished) {
+                self.currentQuestion = nil;
+                self.currentAnswers = nil;
+                [self updateDisplay:nil];
+                [self restoreAnswerPositions];
+            }];
+        }
+    }
+}
+
+- (void)restoreAnswerPositions {
+    for (NSInteger i = VIEW_TAG_ANSWER_BUTTON_BASE; i < VIEW_TAG_ANSWER_BUTTON_BASE + 3; i++) {
+        UIView *view = [self.view viewWithTag:i];
+        view.layer.transform = CATransform3DIdentity;
+    }
 }
 
 - (IBAction)reportQuestion:(id)sender {
@@ -217,7 +239,6 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
         if (error) {
             DDLogError(@"Error during login: %@", error);
         } else {
-            DDLogInfo(@"Response save completed.");
             [self loadEligibleQuestion];
             [self requestInterstitialAdPresentation];
             [Achievements currentUserDidAnswerQuestion];
