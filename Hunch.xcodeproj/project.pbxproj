@@ -34,6 +34,8 @@
 		AF3E5A1F1A76F3EF002574A1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3E5A1D1A76F3EF002574A1 /* ProfileViewController.xib */; };
 		AF7F66321A800639008B996D /* MessageOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F66301A800639008B996D /* MessageOverlayViewController.m */; };
 		AF7F66331A800639008B996D /* MessageOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7F66311A800639008B996D /* MessageOverlayViewController.xib */; };
+		AF8B660B1A812B5000CC057B /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF8B660A1A812B5000CC057B /* HeaderView.xib */; };
+		AF8B660E1A812BB800CC057B /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8B660D1A812BB800CC057B /* HeaderView.m */; };
 		AFBAC3CA1A799F0E001BECCA /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBAC3C91A799F0E001BECCA /* iAd.framework */; };
 		AFE4D1081A78156F00C5377A /* StyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4D1071A78156F00C5377A /* StyleKit.m */; };
 		AFE4D10E1A781D0500C5377A /* AnswerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4D10D1A781D0500C5377A /* AnswerButton.m */; };
@@ -106,6 +108,9 @@
 		AF7F662F1A800639008B996D /* MessageOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageOverlayViewController.h; sourceTree = "<group>"; };
 		AF7F66301A800639008B996D /* MessageOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageOverlayViewController.m; sourceTree = "<group>"; };
 		AF7F66311A800639008B996D /* MessageOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageOverlayViewController.xib; sourceTree = "<group>"; };
+		AF8B660A1A812B5000CC057B /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		AF8B660C1A812BB800CC057B /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		AF8B660D1A812BB800CC057B /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		AFBAC3C91A799F0E001BECCA /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		AFE4D1061A78156F00C5377A /* StyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleKit.h; sourceTree = "<group>"; };
 		AFE4D1071A78156F00C5377A /* StyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleKit.m; sourceTree = "<group>"; };
@@ -303,6 +308,9 @@
 				AFF9D8101A793FF300756B02 /* AchievementTableViewCell.h */,
 				AFF9D8111A793FF300756B02 /* AchievementTableViewCell.m */,
 				AFF9D8121A793FF300756B02 /* AchievementTableViewCell.xib */,
+				AF8B660C1A812BB800CC057B /* HeaderView.h */,
+				AF8B660D1A812BB800CC057B /* HeaderView.m */,
+				AF8B660A1A812B5000CC057B /* HeaderView.xib */,
 			);
 			name = "Profile View";
 			sourceTree = "<group>";
@@ -486,6 +494,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8B660B1A812B5000CC057B /* HeaderView.xib in Resources */,
 				AFF50C531A803D6400AD150D /* hmmm.aiff in Resources */,
 				AF3E5A1F1A76F3EF002574A1 /* ProfileViewController.xib in Resources */,
 				AFF9D8141A793FF300756B02 /* AchievementTableViewCell.xib in Resources */,
@@ -536,6 +545,7 @@
 				AFF9D80E1A793FE400756B02 /* QuestionTableViewCell.m in Sources */,
 				AFF84A511A70611D003DA995 /* DDLog.m in Sources */,
 				AF1E70BF1A70585900FE05CD /* AskQuestionViewController.m in Sources */,
+				AF8B660E1A812BB800CC057B /* HeaderView.m in Sources */,
 				AFF84A5C1A7061C4003DA995 /* DDTTYLogger.m in Sources */,
 				AFF84A561A70619D003DA995 /* DDASLLogCapture.m in Sources */,
 				AFE4D1081A78156F00C5377A /* StyleKit.m in Sources */,
