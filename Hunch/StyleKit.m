@@ -80,7 +80,7 @@ static UIColor* _hunchWhite = nil;
     NSMutableParagraphStyle* rectangleStyle = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     rectangleStyle.alignment = NSTextAlignmentCenter;
 
-    NSDictionary* rectangleFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"AmericanTypewriter-Bold" size: 15], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: rectangleStyle};
+    NSDictionary* rectangleFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"AmericanTypewriter-Bold" size: UIFont.labelFontSize], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: rectangleStyle};
 
     CGFloat rectangleTextHeight = [answer boundingRectWithSize: CGSizeMake(rectangleRect.size.width, INFINITY)  options: NSStringDrawingUsesLineFragmentOrigin attributes: rectangleFontAttributes context: nil].size.height;
     CGContextSaveGState(context);
