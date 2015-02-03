@@ -225,7 +225,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
     }];
 }
 
-#pragma - ADBannerViewDelegate methods
+#pragma mark - ADBannerViewDelegate methods
 
 - (void)bannerViewWillLoadAd:(ADBannerView *)banner {
     DDLogInfo(@"Ad Banner will load ad.");
