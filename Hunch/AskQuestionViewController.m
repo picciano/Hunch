@@ -9,6 +9,7 @@
 #import "AskQuestionViewController.h"
 #import "SignUpViewController.h"
 #import "UIControl+NextControl.h"
+#import "Achievements.h"
 #import "Constants.h"
 #import <Parse/Parse.h>
 #import "CocoaLumberjack.h"
@@ -188,6 +189,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
                 DDLogError(@"Error during save question: %@", error);
             } else {
                 DDLogInfo(@"Question saved.");
+                [Achievements currentUserDidAskQuestion];
                 [self performSelectorOnMainThread:@selector(dismiss:) withObject:nil waitUntilDone:NO];
             }
         }];

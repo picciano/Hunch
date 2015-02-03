@@ -11,6 +11,7 @@
 #import "ProfileViewController.h"
 #import "AnswerButton.h"
 #import "MessageOverlayViewController.h"
+#import "Achievements.h"
 #import "Constants.h"
 #import <Parse/Parse.h>
 #import "CocoaLumberjack.h"
@@ -210,6 +211,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
             DDLogInfo(@"Response save completed.");
             [self loadEligibleQuestion];
             [self requestInterstitialAdPresentation];
+            [Achievements currentUserDidAnswerQuestion];
         }
     }];
 }

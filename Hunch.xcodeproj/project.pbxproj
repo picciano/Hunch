@@ -39,6 +39,7 @@
 		AFE4D10E1A781D0500C5377A /* AnswerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4D10D1A781D0500C5377A /* AnswerButton.m */; };
 		AFF50C531A803D6400AD150D /* hmmm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = AFF50C521A803C3E00AD150D /* hmmm.aiff */; };
 		AFF50C551A8040E700AD150D /* yea.aiff in Resources */ = {isa = PBXBuildFile; fileRef = AFF50C541A8040E700AD150D /* yea.aiff */; };
+		AFF50C591A8041CA00AD150D /* Achievements.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF50C581A8041CA00AD150D /* Achievements.m */; };
 		AFF84A471A705EEA003DA995 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF84A451A705EEA003DA995 /* SignUpViewController.m */; };
 		AFF84A481A705EEA003DA995 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF84A461A705EEA003DA995 /* SignUpViewController.xib */; };
 		AFF84A511A70611D003DA995 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF84A501A70611D003DA995 /* DDLog.m */; };
@@ -112,6 +113,8 @@
 		AFE4D10D1A781D0500C5377A /* AnswerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerButton.m; sourceTree = "<group>"; };
 		AFF50C521A803C3E00AD150D /* hmmm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = hmmm.aiff; sourceTree = "<group>"; };
 		AFF50C541A8040E700AD150D /* yea.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = yea.aiff; sourceTree = "<group>"; };
+		AFF50C571A8041CA00AD150D /* Achievements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Achievements.h; sourceTree = "<group>"; };
+		AFF50C581A8041CA00AD150D /* Achievements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Achievements.m; sourceTree = "<group>"; };
 		AFF84A441A705EEA003DA995 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		AFF84A451A705EEA003DA995 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		AFF84A461A705EEA003DA995 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
@@ -211,6 +214,7 @@
 				AFE4D1051A7807D300C5377A /* Style Kit */,
 				AFE4D1041A7807BA00C5377A /* Extensions */,
 				AF1E70721A704C0D00FE05CD /* Supporting Files */,
+				AFF50C561A80419C00AD150D /* Acheivements */,
 				AFF50C511A803C3200AD150D /* Sounds */,
 				AFF84A491A706076003DA995 /* Cocoa Lumberjack */,
 				AF1E709F1A7053B800FE05CD /* Frameworks */,
@@ -340,6 +344,15 @@
 				AFF50C521A803C3E00AD150D /* hmmm.aiff */,
 			);
 			name = Sounds;
+			sourceTree = "<group>";
+		};
+		AFF50C561A80419C00AD150D /* Acheivements */ = {
+			isa = PBXGroup;
+			children = (
+				AFF50C571A8041CA00AD150D /* Achievements.h */,
+				AFF50C581A8041CA00AD150D /* Achievements.m */,
+			);
+			name = Acheivements;
 			sourceTree = "<group>";
 		};
 		AFF84A431A705EB4003DA995 /* Sign Up View */ = {
@@ -535,6 +548,7 @@
 				AF1E70751A704C0D00FE05CD /* main.m in Sources */,
 				AF1E709D1A70500D00FE05CD /* QuestionViewController.m in Sources */,
 				AF3E5A1E1A76F3EF002574A1 /* ProfileViewController.m in Sources */,
+				AFF50C591A8041CA00AD150D /* Achievements.m in Sources */,
 				AFE4D10E1A781D0500C5377A /* AnswerButton.m in Sources */,
 				AFF84A5F1A7061D4003DA995 /* DDFileLogger.m in Sources */,
 				AFF9D81C1A79651E00756B02 /* QuestionResultViewController.m in Sources */,

@@ -21,6 +21,7 @@
 #define MAXIMUM_ANSWER_LENGTH   30
 
 #define OBJECT_TYPE_ABUSE       @"Abuse"
+#define OBJECT_TYPE_ACHIEVEMENT @"Achievement"
 #define OBJECT_TYPE_ANSWER      @"Answer"
 #define OBJECT_TYPE_QUESTION    @"Question"
 #define OBJECT_TYPE_RESPONSE    @"Response"
@@ -28,6 +29,7 @@
 #define OBJECT_KEY_ANSWER       @"answer"
 #define OBJECT_KEY_ANSWERS      @"answers"
 #define OBJECT_KEY_CREATED_AT   @"createdAt"
+#define OBJECT_KEY_DESCRIPTION  @"description"
 #define OBJECT_KEY_ID           @"objectId"
 #define OBJECT_KEY_QUESTION     @"question"
 #define OBJECT_KEY_QUESTION_ID  @"questionId"

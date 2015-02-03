@@ -1,18 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AchievementTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZg-S6-k1E">
+                        <rect key="frame" x="8" y="2" width="304" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Nth-7X-4yu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bz2-tO-vEq">
+                        <rect key="frame" x="8" y="22" width="304" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="ery-hD-eSC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUT-Uu-wuF">
+                        <rect key="frame" x="8" y="44" width="304" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="T8D-GF-oqY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Bz2-tO-vEq" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="0lM-bT-hEs"/>
+                    <constraint firstItem="MUT-Uu-wuF" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="25f-aD-BLk"/>
+                    <constraint firstItem="MUT-Uu-wuF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="3A5-ey-Zf4"/>
+                    <constraint firstItem="Bz2-tO-vEq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="EvE-Aa-l5Y"/>
+                    <constraint firstItem="Bz2-tO-vEq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="14" id="Jkd-gT-DtQ"/>
+                    <constraint firstItem="OZg-S6-k1E" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="MIN-yg-miJ"/>
+                    <constraint firstItem="MUT-Uu-wuF" firstAttribute="top" secondItem="Bz2-tO-vEq" secondAttribute="bottom" constant="1" id="VLi-GN-Bv9"/>
+                    <constraint firstItem="OZg-S6-k1E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="dVM-DR-aOp"/>
+                    <constraint firstItem="OZg-S6-k1E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-6" id="zCR-XA-hyG"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="achievementCreatedAtLabel" destination="MUT-Uu-wuF" id="YUD-wS-Zbx"/>
+                <outlet property="achievementDescriptionLabel" destination="Bz2-tO-vEq" id="5Es-Vs-a4y"/>
+                <outlet property="achievementTextLabel" destination="OZg-S6-k1E" id="JgQ-d1-hkK"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

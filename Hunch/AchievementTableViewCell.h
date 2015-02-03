@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface AchievementTableViewCell : UITableViewCell
+
+@property (strong, nonatomic) PFObject *achievement;
 
 @end

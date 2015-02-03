@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) int numberOfResponses;
 @property (nonatomic) NSArray *questions;
+@property (nonatomic) NSArray *achievements;
 
 @end
 
@@ -78,6 +79,7 @@ static NSString *kQuestionReuseIdentifier = @"kQuestionReuseIdentifier";
 
 - (void)loadProfile {
     self.questions = [NSArray array];
+    self.achievements = [NSArray array];
     self.numberOfResponses = 0;
     
     PFQuery *answers = [PFQuery queryWithClassName:OBJECT_TYPE_RESPONSE];
@@ -89,6 +91,7 @@ static NSString *kQuestionReuseIdentifier = @"kQuestionReuseIdentifier";
             self.numberOfResponses = number;
         }
     }];
+    
     PFQuery *questions = [PFQuery queryWithClassName:OBJECT_TYPE_QUESTION];
     [questions whereKey:OBJECT_KEY_USER equalTo:[PFUser currentUser]];
     [questions orderByDescending:OBJECT_KEY_CREATED_AT];
@@ -97,6 +100,18 @@ static NSString *kQuestionReuseIdentifier = @"kQuestionReuseIdentifier";
             DDLogError(@"Could not load questions: %@", error);
         } else {
             self.questions = objects;
+            [self.tableView reloadData];
+        }
+    }];
+    
+    PFQuery *achievements = [PFQuery queryWithClassName:OBJECT_TYPE_ACHIEVEMENT];
+    [achievements whereKey:OBJECT_KEY_USER equalTo:[PFUser currentUser]];
+    [achievements orderByDescending:OBJECT_KEY_CREATED_AT];
+    [achievements findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error) {
+            DDLogError(@"Could not load achievements: %@", error);
+        } else {
+            self.achievements = objects;
             [self.tableView reloadData];
         }
     }];
@@ -113,7 +128,23 @@ static NSString *kQuestionReuseIdentifier = @"kQuestionReuseIdentifier";
 #pragma - UITableViewDelegate and UITableViewDataSource methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case 0:
+            return 44.0f;
+            break;
+            
+        case 1:
+            return 66.0f;
+            break;
+            
+        default:
+            return 44.0f;
+            break;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -123,7 +154,7 @@ static NSString *kQuestionReuseIdentifier = @"kQuestionReuseIdentifier";
             break;
             
         case 1:
-            return 5;
+            return self.achievements.count;
             break;
             
         default:
@@ -173,9 +204,7 @@ static NSString *kQuestionReuseIdentifier = @"kQuestionReuseIdentifier";
 
 - (AchievementTableViewCell *)tableView:(UITableView *)tableView achievementTableViewCellAtIndexPath:(NSIndexPath *)indexPath {
     AchievementTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kAchievementTableViewCell forIndexPath:indexPath];
-    
-    // Configure the cell...
-    cell.textLabel.text = @"Achievement entry...";
+    cell.achievement = self.achievements[indexPath.row];
     
     return cell;
 }
