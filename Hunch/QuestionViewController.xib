@@ -17,6 +17,9 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="kA4-VP-y4X">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNT-mP-daz">
                     <rect key="frame" x="8" y="51" width="304" height="60"/>
                     <constraints>
@@ -150,10 +153,14 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="kA4-VP-y4X" secondAttribute="trailing" id="2sJ-2I-fXX"/>
+                <constraint firstItem="kA4-VP-y4X" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7De-Q1-4uR"/>
                 <constraint firstItem="MNT-mP-daz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Hs2-BG-yKL"/>
+                <constraint firstItem="kA4-VP-y4X" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LE2-0h-TxV"/>
                 <constraint firstItem="aCa-8L-8JJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="RkW-QW-IEB"/>
                 <constraint firstAttribute="trailing" secondItem="MNT-mP-daz" secondAttribute="trailing" constant="8" id="U7c-WM-Urk"/>
                 <constraint firstAttribute="trailing" secondItem="qKX-aV-4ud" secondAttribute="trailing" constant="8" id="ZYy-ea-f8x"/>
+                <constraint firstAttribute="bottom" secondItem="kA4-VP-y4X" secondAttribute="bottom" id="Zjs-0a-JUt"/>
                 <constraint firstItem="QuA-br-Aoj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZzU-pz-mY3"/>
                 <constraint firstItem="qKX-aV-4ud" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="cnv-KJ-ZJj"/>
                 <constraint firstAttribute="bottom" secondItem="QuA-br-Aoj" secondAttribute="bottom" id="dOB-kj-SHO"/>
@@ -169,4 +176,7 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background" width="320" height="480"/>
+    </resources>
 </document>
