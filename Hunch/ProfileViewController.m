@@ -100,6 +100,7 @@ static NSString *kQuestionReuseIdentifier = @"kQuestionReuseIdentifier";
             DDLogError(@"Could not load questions: %@", error);
         } else {
             self.questions = objects;
+            [self updateDisplay];
             [self.tableView reloadData];
         }
     }];
