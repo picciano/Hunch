@@ -105,6 +105,20 @@
                         <action selector="login:" destination="-1" eventType="touchUpInside" id="nDa-hU-B63"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmd-CN-v8G">
+                    <rect key="frame" x="525" y="167" width="67" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="NVT-s2-LBB"/>
+                        <constraint firstAttribute="width" constant="67" id="wXC-Q5-Tvt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                    <state key="normal" title="Cancel">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="cancel:" destination="-1" eventType="touchUpInside" id="BZM-6P-tje"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -113,6 +127,7 @@
                 <constraint firstAttribute="trailing" secondItem="yaD-6I-X2b" secondAttribute="trailing" id="1ws-v8-miu"/>
                 <constraint firstItem="bNq-Oe-DsJ" firstAttribute="leading" secondItem="pj0-Ed-uIC" secondAttribute="trailing" constant="13" id="4wb-PH-dJJ"/>
                 <constraint firstAttribute="trailing" secondItem="bNq-Oe-DsJ" secondAttribute="trailing" constant="8" id="9fc-d5-zrE"/>
+                <constraint firstItem="Rmd-CN-v8G" firstAttribute="top" secondItem="bNq-Oe-DsJ" secondAttribute="bottom" constant="3" id="Bwq-CB-cta"/>
                 <constraint firstItem="yaD-6I-X2b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DBu-k2-ZVY"/>
                 <constraint firstItem="n9K-qD-MrN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="FJU-pf-tDm"/>
                 <constraint firstItem="C70-sc-Tk2" firstAttribute="top" secondItem="n9K-qD-MrN" secondAttribute="bottom" constant="8" id="KY1-9G-Nub"/>
@@ -121,6 +136,7 @@
                 <constraint firstItem="e7m-h4-9Rr" firstAttribute="top" secondItem="n9K-qD-MrN" secondAttribute="bottom" constant="12" id="S4D-CS-fp5"/>
                 <constraint firstAttribute="trailing" secondItem="n9K-qD-MrN" secondAttribute="trailing" constant="8" id="Sl5-cM-cbU"/>
                 <constraint firstItem="pj0-Ed-uIC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Tl0-Ea-Bir"/>
+                <constraint firstAttribute="trailing" secondItem="Rmd-CN-v8G" secondAttribute="trailing" constant="8" id="cyB-lz-ucS"/>
                 <constraint firstAttribute="bottom" secondItem="yaD-6I-X2b" secondAttribute="bottom" id="duU-UD-Gn8"/>
                 <constraint firstAttribute="centerX" secondItem="6Ut-qJ-KzN" secondAttribute="centerX" id="ebN-Rw-FbI"/>
                 <constraint firstItem="ALG-3M-7wl" firstAttribute="top" secondItem="bNq-Oe-DsJ" secondAttribute="bottom" constant="8" id="i6e-5x-Onh"/>

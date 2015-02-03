@@ -132,7 +132,7 @@
                         <constraint firstAttribute="width" constant="48" id="GJV-wY-Wxy"/>
                         <constraint firstAttribute="height" constant="30" id="hRZ-0y-b8F"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
                     <state key="normal" title="Cancel">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>

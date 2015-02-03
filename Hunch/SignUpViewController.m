@@ -10,6 +10,7 @@
 #import "CocoaLumberjack.h"
 #import "UIControl+NextControl.h"
 #import "Constants.h"
+#import "AskQuestionViewController.h"
 #import <Parse/Parse.h>
 
 @interface SignUpViewController ()
@@ -38,6 +39,10 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
 
 - (IBAction)updateDisplay:(id)sender {
     self.signupButton.enabled = self.loginButton.enabled = (self.usernameField.text.length > 0 && self.passwordField.text.length > 0);
+}
+
+- (IBAction)cancel:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)signUp:(id)sender {

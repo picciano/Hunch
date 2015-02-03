@@ -29,6 +29,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *answer3Label;
 @property (weak, nonatomic) IBOutlet UILabel *questionCharacterCountLabel;
 @property (weak, nonatomic) IBOutlet UIButton *askQuestionButton;
+@property (nonatomic) BOOL attemptingLogin;
 
 typedef enum {
     QuestionTypeUnknown,
@@ -61,8 +62,12 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     if ([PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
-        DDLogDebug(@"User is anonymous. Show sign up view.");
-        [self displaySignUp];
+        if (self.attemptingLogin) {
+            [self dismiss:nil];
+        } else {
+            self.attemptingLogin = YES;
+            [self displaySignUp];
+        }
     }
 }
 
@@ -202,9 +207,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 - (void)displaySignUp {
     UIViewController *viewController = [[SignUpViewController alloc] initWithNibName:nil bundle:nil];
-    [self presentViewController:viewController animated:YES completion:^{
-        
-    }];
+    [self presentViewController:viewController animated:YES completion:nil];
 }
 
 - (BOOL)prefersStatusBarHidden {
