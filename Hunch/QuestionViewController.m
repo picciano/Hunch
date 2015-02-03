@@ -46,6 +46,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
     self.messageOverlay.backgroundColor = [UIColor clearColor];
     [self.view insertSubview:self.messageOverlay.view belowSubview:self.adBanner];
     
+    [self setAnswerBackgroundImages];
+    
     if (![PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
         [self loadEligibleQuestion];
     }
@@ -55,6 +57,12 @@ static const DDLogLevel ddLogLevel = DDLogLevelError;
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
+}
+
+- (void)setAnswerBackgroundImages {
+    ((AnswerButton *)[self.view viewWithTag:VIEW_TAG_ANSWER_BUTTON_BASE + 0]).background = [UIImage imageNamed:@"Answer1"];
+    ((AnswerButton *)[self.view viewWithTag:VIEW_TAG_ANSWER_BUTTON_BASE + 1]).background = [UIImage imageNamed:@"Answer2"];
+    ((AnswerButton *)[self.view viewWithTag:VIEW_TAG_ANSWER_BUTTON_BASE + 2]).background = [UIImage imageNamed:@"Answer3"];
 }
 
 - (IBAction)askAQuestion:(id)sender {
