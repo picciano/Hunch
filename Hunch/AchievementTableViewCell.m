@@ -28,7 +28,7 @@
 - (void)updateDisplay {
     self.achievementTextLabel.text = [NSString stringWithFormat:@"%@", self.achievement[OBJECT_KEY_TEXT]];
     self.achievementDescriptionLabel.text = [NSString stringWithFormat:@"%@", self.achievement[OBJECT_KEY_DESCRIPTION]];
-    self.achievementCreatedAtLabel.text = [NSString stringWithFormat:@"Asked on %@", [self.achievement createdAtWithDateFormat:NSDateFormatterMediumStyle timeFormat:NSDateFormatterShortStyle]];
+    self.achievementCreatedAtLabel.text = [NSString stringWithFormat:@"Awarded on %@", [self.achievement createdAtWithDateFormat:NSDateFormatterMediumStyle timeFormat:NSDateFormatterShortStyle]];
 }
 
 @end
