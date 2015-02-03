@@ -681,6 +681,7 @@
 					"$(PROJECT_DIR)/Hunch",
 				);
 				INFOPLIST_FILE = Hunch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "d270dfff-5f45-4e02-b4e8-9327ec33b12a";
@@ -697,6 +698,7 @@
 					"$(PROJECT_DIR)/Hunch",
 				);
 				INFOPLIST_FILE = Hunch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c463d7d3-8b9c-40cd-a0a3-8fef405bd211";
