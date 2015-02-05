@@ -702,7 +702,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d270dfff-5f45-4e02-b4e8-9327ec33b12a";
+				PROVISIONING_PROFILE = "fc8b00e1-d05a-40fc-a417-65b11242f10b";
 			};
 			name = Debug;
 		};
@@ -719,7 +719,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c463d7d3-8b9c-40cd-a0a3-8fef405bd211";
+				PROVISIONING_PROFILE = "ed28341d-199e-41b4-897a-24d3da41238d";
 			};
 			name = Release;
 		};
