@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>questions</key>
+	<array>
+		<dict>
+			<key>text</key>
+			<string>Will Hilary Clinton win the 2016 presidential election?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What is the best kind of tortilla?</string>
+			<key>answers</key>
+			<array>
+				<string>Corn</string>
+				<string>Flour</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What is for dinner?</string>
+			<key>answers</key>
+			<array>
+				<string>Fish</string>
+				<string>Steak</string>
+				<string>Pizza</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Who will be the next president?</string>
+			<key>answers</key>
+			<array>
+				<string>Democrat</string>
+				<string>Republican</string>
+				<string>Third Party</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Will it rain tomorrow?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Are you better off than you were in 2008?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What is the best type of music?</string>
+			<key>answers</key>
+			<array>
+				<string>Rap</string>
+				<string>Rock and roll</string>
+				<string>Classical</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Most produced meat in U.S.?</string>
+			<key>answers</key>
+			<array>
+				<string>Beef</string>
+				<string>Pork</string>
+				<string>Chicken</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What is better?</string>
+			<key>answers</key>
+			<array>
+				<string>Being compassionate</string>
+				<string>Being intelligent</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Will Edward Snowden ever return to the U.S.?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Who makes better products?</string>
+			<key>answers</key>
+			<array>
+				<string>Apple</string>
+				<string>Microsoft</string>
+				<string>Amazon</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What is the best fast food restaurant?</string>
+			<key>answers</key>
+			<array>
+				<string>Chick-fil-a</string>
+				<string>McDonalds</string>
+				<string>Burger King</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What is the best source of renewable energy?</string>
+			<key>answers</key>
+			<array>
+				<string>Solar</string>
+				<string>Wind</string>
+				<string>Hydroelectric</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What is faster?</string>
+			<key>answers</key>
+			<array>
+				<string>Typing</string>
+				<string>Writing cursive</string>
+				<string>Printing</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Will fresh water ever be more scarce than oil?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What will the price of gasoline be at the end of 2015?</string>
+			<key>answers</key>
+			<array>
+				<string>Under $1 per gallon</string>
+				<string>Between $1 and $3 per gallon</string>
+				<string>Over $3 per gallon</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What&apos;s the stickiest substance?</string>
+			<key>answers</key>
+			<array>
+				<string>Duck tape</string>
+				<string>Hot glue</string>
+				<string>Honey</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Will the price of gold go up in 2015?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Are you planning to buy an Apple Watch?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+				<string>One for each wrist</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Will Radio Shack go out of business in 2015?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What&apos;s the best way to send a package?</string>
+			<key>answers</key>
+			<array>
+				<string>FedEx</string>
+				<string>UPS</string>
+				<string>U.S. Post Office</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Will NASA find life somewhere else besides earth?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+				<string>Someone else will discover it</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Is the flu vaccine...</string>
+			<key>answers</key>
+			<array>
+				<string>Beneficial</string>
+				<string>Harmful</string>
+				<string>Has no effect</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Are stay at home moms?</string>
+			<key>answers</key>
+			<array>
+				<string>Controlling</string>
+				<string>Caring</string>
+				<string>Boring</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>A large bracelet is?</string>
+			<key>answers</key>
+			<array>
+				<string>Fun</string>
+				<string>Obnoxious</string>
+				<string>Cool</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What makes a good leader?</string>
+			<key>answers</key>
+			<array>
+				<string>Bossiness</string>
+				<string>Sets an example</string>
+				<string>Gives instruction</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Time for dessert, what do I pick?</string>
+			<key>answers</key>
+			<array>
+				<string>Brownies</string>
+				<string>Pie</string>
+				<string>Truffles</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What is the best kind of chocolate?</string>
+			<key>answers</key>
+			<array>
+				<string>Dark</string>
+				<string>Milk</string>
+				<string>White</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>You get to choose the sex of your child. What would you choose?</string>
+			<key>answers</key>
+			<array>
+				<string>Male</string>
+				<string>Female</string>
+				<string>Twins</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Aliens are best described as?</string>
+			<key>answers</key>
+			<array>
+				<string>Real</string>
+				<string>Imaginary</string>
+				<string>Weird</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Shopping is?</string>
+			<key>answers</key>
+			<array>
+				<string>Fun</string>
+				<string>Unpleasant</string>
+				<string>Time consuming</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Today I am going to wear?</string>
+			<key>answers</key>
+			<array>
+				<string>Red</string>
+				<string>Blue</string>
+				<string>Black</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Where to go on a vacation?</string>
+			<key>answers</key>
+			<array>
+				<string>To the beach</string>
+				<string>Camping</string>
+				<string>Las Vegas</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>When it&apos;s time to make an important decision, would you?</string>
+			<key>answers</key>
+			<array>
+				<string>Ask someone for advice</string>
+				<string>Research it</string>
+				<string>Avoid it</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>You have been given the afternoon off. Should you?</string>
+			<key>answers</key>
+			<array>
+				<string>Go fishing</string>
+				<string>Go shopping</string>
+				<string>Help a friend</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>You must eat the same meal everyday. What would you choose?</string>
+			<key>answers</key>
+			<array>
+				<string>Burger</string>
+				<string>Steak</string>
+				<string>Sushi</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Worst chore ever?</string>
+			<key>answers</key>
+			<array>
+				<string>Laundry</string>
+				<string>Cleaning</string>
+				<string>Errands</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>You are going to work out. What do you choose?</string>
+			<key>answers</key>
+			<array>
+				<string>Running</string>
+				<string>Aerobics</string>
+				<string>Lifting weights</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Best way to get to your destination?</string>
+			<key>answers</key>
+			<array>
+				<string>Ride a bike</string>
+				<string>Drive</string>
+				<string>Walk</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Where do you look first for recipes?</string>
+			<key>answers</key>
+			<array>
+				<string>AllRecipes.com</string>
+				<string>Mom&apos;s cookbook</string>
+				<string>Food Network</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Your house is a mess. What now?</string>
+			<key>answers</key>
+			<array>
+				<string>Hire a maid</string>
+				<string>Take a day and clean</string>
+				<string>Cover mess; go party</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Where to send the kids to college?</string>
+			<key>answers</key>
+			<array>
+				<string>State school</string>
+				<string>Private university</string>
+				<string>Community college</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What is the best way to get out of debt?</string>
+			<key>answers</key>
+			<array>
+				<string>Borrow money</string>
+				<string>Cut expenses</string>
+				<string>Pay cash</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Will another 9/11 happen within ten years?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Is the U.S. moving toward socialism?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Is prepping?</string>
+			<key>answers</key>
+			<array>
+				<string>Just makes sense</string>
+				<string>Foolish waste of money</string>
+				<string>Just plain crazy</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Will a financial collapse happen in the next five years?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+				<string>Never</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>To get news, where do you look?</string>
+			<key>answers</key>
+			<array>
+				<string>CNN</string>
+				<string>Fox News</string>
+				<string>Drudge Report</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Who would you want to meet from the past?</string>
+			<key>answers</key>
+			<array>
+				<string>John F. Kennedy</string>
+				<string>Marilyn Monroe</string>
+				<string>Jesus</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>You just won the lottery. What now?</string>
+			<key>answers</key>
+			<array>
+				<string>Buy a bigger home</string>
+				<string>Give it to charity</string>
+				<string>Start a business</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>You will be reincarnated as a?</string>
+			<key>answers</key>
+			<array>
+				<string>Fish</string>
+				<string>Bird</string>
+				<string>Monkey</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>The world is ending today. What do you do?</string>
+			<key>answers</key>
+			<array>
+				<string>Spend time with family</string>
+				<string>Go sailing</string>
+				<string>Tell everyone what you think</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What is the best farm animal for a small farm?</string>
+			<key>answers</key>
+			<array>
+				<string>Goats</string>
+				<string>Chickens</string>
+				<string>Horse</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>If you could stay at one age, what age would you pick?</string>
+			<key>answers</key>
+			<array>
+				<string>10</string>
+				<string>18</string>
+				<string>35</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What landscape would you paint?</string>
+			<key>answers</key>
+			<array>
+				<string>The beach</string>
+				<string>The mountains</string>
+				<string>The forest</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What fictional character would you be?</string>
+			<key>answers</key>
+			<array>
+				<string>Darth Vader</string>
+				<string>Katniss Everdeen</string>
+				<string>Forest Gump</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What do you want to be when you grow up?</string>
+			<key>answers</key>
+			<array>
+				<string>Athlete</string>
+				<string>Musician</string>
+				<string>Exactly what you are</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What is the best weather?</string>
+			<key>answers</key>
+			<array>
+				<string>Rainy</string>
+				<string>Snowy</string>
+				<string>Sunny</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>You just received a nicely wrapped gift. What do you hope it is?</string>
+			<key>answers</key>
+			<array>
+				<string>Tickets to a show</string>
+				<string>New purse or wallet</string>
+				<string>Gift card</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Do you want to go back to college?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+				<string>Never went</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Are you looking for a new job?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>It&apos;s time to retire for the evening. What now?</string>
+			<key>answers</key>
+			<array>
+				<string>Grab a book</string>
+				<string>Watch television</string>
+				<string>Get a snack</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>When will the next massive earthquake happen?</string>
+			<key>answers</key>
+			<array>
+				<string>This year</string>
+				<string>Next year</string>
+				<string>Within ten years</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Does fracking cause earthquakes?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Are forced labor camps coming to the U.S.?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What is a good career choice?</string>
+			<key>answers</key>
+			<array>
+				<string>Plumber</string>
+				<string>Artist or musician</string>
+				<string>Software developer</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>You need to learn a musical instrument. Do you pick a?</string>
+			<key>answers</key>
+			<array>
+				<string>Guitar</string>
+				<string>Piano</string>
+				<string>Drums</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Osama bin Laden was burried at sea because?</string>
+			<key>answers</key>
+			<array>
+				<string>Observing Islamic law</string>
+				<string>No body was available</string>
+				<string>He is still alive</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>The price of oil will?</string>
+			<key>answers</key>
+			<array>
+				<string>Continue falling</string>
+				<string>Stay at the current price</string>
+				<string>Start going up</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Before the next presidential election?</string>
+			<key>answers</key>
+			<array>
+				<string>We will be in financial ruin</string>
+				<string>World War III will start</string>
+				<string>Economy will improve</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>In the year 2020, things will be generally?</string>
+			<key>answers</key>
+			<array>
+				<string>Like they are now</string>
+				<string>Loss of freedoms</string>
+				<string>Life of leisure</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>If the U.S. became Socialist?</string>
+			<key>answers</key>
+			<array>
+				<string>Things would be better</string>
+				<string>Things would be worse</string>
+				<string>We&apos;re not?</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What is one thing that would make today better?</string>
+			<key>answers</key>
+			<array>
+				<string>Hearing from a friend</string>
+				<string>Having mom understand you</string>
+				<string>Getting out of debt</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>If you were in congress, what would you do?</string>
+			<key>answers</key>
+			<array>
+				<string>Lower taxes</string>
+				<string>Increase benefits</string>
+				<string>Help the middle class</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Year-round public school sounds?</string>
+			<key>answers</key>
+			<array>
+				<string>Awesome</string>
+				<string>Tough for teachers</string>
+				<string>Good for students</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Are you counting on social security for retirement?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Will food supplements replace meals within 50 years?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Are we facing another great depression?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>If we learn from our mistakes, why are we afraid to make them?</string>
+			<key>answers</key>
+			<array>
+				<string>Feels dumb</string>
+				<string>Too costly</string>
+				<string>Prefer to learn from others</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Are you more worried about?</string>
+			<key>answers</key>
+			<array>
+				<string>Doing the right thing</string>
+				<string>Doing things right</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>You must have a body part surgically removed. What do you pick?</string>
+			<key>answers</key>
+			<array>
+				<string>Arm</string>
+				<string>Leg</string>
+				<string>Eyes</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Where would you rather be right now?</string>
+			<key>answers</key>
+			<array>
+				<string>Golfing</string>
+				<string>Skiing</string>
+				<string>Sleeping</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Would you rather eat something?</string>
+			<key>answers</key>
+			<array>
+				<string>Slimy</string>
+				<string>Fuzzy</string>
+				<string>Prickly</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>If you had something crawling on you, would you rather it were a?</string>
+			<key>answers</key>
+			<array>
+				<string>Spider</string>
+				<string>Snake</string>
+				<string>Insect</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Where would you rather be stuck?</string>
+			<key>answers</key>
+			<array>
+				<string>Roof of tall building</string>
+				<string>In an elevator</string>
+				<string>Underground</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Is it better to be?</string>
+			<key>answers</key>
+			<array>
+				<string>Rich</string>
+				<string>Famous</string>
+				<string>Happy</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Did Nicola Tesla ever prove free electricity?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What is the best pet?</string>
+			<key>answers</key>
+			<array>
+				<string>Dog</string>
+				<string>Cat</string>
+				<string>Other</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Where would it be worse to be stranded?</string>
+			<key>answers</key>
+			<array>
+				<string>Atop a snowy mountain</string>
+				<string>In the midst of a desert</string>
+				<string>Adrift at sea</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Is time travel possible?</string>
+			<key>answers</key>
+			<array>
+				<string>Yes, but only in one direction</string>
+				<string>Yes</string>
+				<string>No</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>What is your goal?</string>
+			<key>answers</key>
+			<array>
+				<string>Change the world</string>
+				<string>Have fun</string>
+				<string>Meet people</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
